@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 常量默认值在struts2-core-*.*.*.jar的org.apache.struts2.default.properties中 -->
+	<!-- 允许在修改本配置文件后自动重加载，设为否后只能重启服务器后生效 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 字符编码,其中i18n表示国际化的意思 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 浏览器缓存 -->
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+	<!-- 动态加载，考虑到安全性默认关闭 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<!-- action的后缀，就是在url中访问action时在action的名字后面添加的东西 -->
+	<constant name="struts.action.extension" value="action,do,go,,"></constant>
+	<!-- 开发者模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+
+	<!-- 包名是用来被其他包继承用的，一般需要继承struts-default，里面包含了所有struts中常用的属性的定义 或则自己配齐所有必须元素 -->
+	<!-- namespace就是在浏览器项目名后面必须根的子目录名 -->
+	<package name="default" namespace="/test" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="loginFilter" class="com.jdl.filter.HelloWorldFilter"></interceptor>
+			<interceptor-stack name="myINterceptorStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginFilter"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- name就是url中用到的东西，访问url时，在namespace和action_name中间可以任意添加东西不影响访问 -->
+		<!-- class就是action对应执行的action类即， method就是action类中在被访问action是被调用的类 class类默认为ActionSupport类，返回数据为"success" 
+			method默认为execute方法 -->
+		<action class="com.jdl.test.LoginAction" name="login" method="login">
+			<!-- 用来设置action中的默认值，如果传入url参数包含对应参数的话，那么就不起作用，自动通过set方法来设置值 -->
+			<param name="test">HelloWorld</param>
+			<!-- name就是action方法返回时需要执行那个结果，默认为success type=就是result需要执行的方式，具体的可以在struts-default中看到，常用的有 
+				dispatcher 转发网页，这个为默认值 chain 转发action redirect 重定向 redirectAction 重定向action 
+				stream 文件传输的时候用到 -->
+			<!-- 这个参数注入是返回结果后注入 -->
+			<result name="success" type="dispatcher">
+				/showMessage.jsp
+			</result>
+		</action>
+
+
+		<action name="source">
+			<!-- 拦截器名字可以是拦截器名字，也可以是拦截器栈的名字 -->
+			<interceptor-ref name="myINterceptorStack"></interceptor-ref>
+			<result name="login">
+				/login.jsp
+			</result>
+			<result name="source">
+				/WEB-INF/jsp/source.jsp
+			</result>
+		</action>
+	</package>
+</struts>

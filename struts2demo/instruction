@@ -1,0 +1,43 @@
+# charset=UTF-8
+# 
+# 运行环境：
+#       tomcat9, jdk8, myeclipse 2017, struts 2.3.35
+# 
+# 运行注意事项：
+#       struts 2.5同2.3配置不一样，现在以2.3为准
+# 
+# 基础配置：
+#       1. web.xml  配置过滤器来说明这是一个使用struts2框架项目   （注解1）
+#       2. 源文件夹下配置核心文件struts.xml，
+#
+# 网页响应基本原理：
+#       0. struts.xml配置文件详解看里面注释，一层标签就是对应一个类,
+#          action对应的类由class定义，result则由type定义，
+#                   而type对应的class则在struts-default中的result-type中的class属性定义
+#                   
+#       1. 一个action表示一个网页处理响应，具体结构看struts.xml中的注释
+#		
+#
+#		2. package -> action -> interceptor -> invocation -> action -> interceptor -> result
+#
+#
+#
+# 例子：官方文件的all中自带例子，需要导入的包，web.xml，struts.xml都可以在参考例子里面的其中blank是最简单的一个
+
+
+
+
+具体内容
+	1. ajax
+	2. 文件上传下载
+	3. 拦截器
+	4. actionContext
+	5. result-type及参数传递
+	6. 配置文件常量配置
+	7. struts2通配符*来设置action
+	8. 参数注入
+
+
+
+
+
