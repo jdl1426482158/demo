@@ -1,0 +1,66 @@
+# charset=utf-8
+# 
+# 运行环境：
+#       tomcat 9，jdk 1.8， myeclipse2017
+#       
+# tomcat说明：
+#       1. 文件安装
+#             直接解压就可以了，常规的配置相关系统环境变量就可以使用在命令行直接使用了
+#       2. 运行
+#             a） 准备：需要配置java环境变量，或者修改 ./bin/{startup.bat|startup.sh} 中的java相关脚本变量值亦可，推荐前者
+#             b） 运行：windows 下./bin/startup.bat, linux 下 ./bin/startup.sh运行既可
+#             c） 关闭：运行相应 ./bin/shutdown.{bat|sh}即可
+#       3. 文件夹说明
+#             a) bin    二进制文件文件（包括java运行支持库，windows脚本，linux脚本
+#             b) conf   配置文件
+#                             logging.properties    服务器日志配置文件，包括日志位置，日志等级等属性
+#                             catalina.policy       策略文件，即用来管理相应权限的配置文件
+#                             catalina.properties   主要配置tomcat的安全设置、类加载顺序设置、不需要扫描的类设置、字符缓存设置
+#
+#                           * server.xml            服务器配置，定义了服务器名字，主机名字，服务器协议及对应端口（如http，https），可以定义URI路径编码等，
+#                           * context.xml           应用上下文，定义web应用相关配置，一个context表示一个web应用，包括定义web应用中的核心配置名字和位置 /WEB-INF/web.xml
+#                           * web.xml               默认的web应用核心配置文件
+#
+#                             tomcat-users.xml      tomcat自带example的用户配置，运行时不需要用到，默认是关闭用户的
+#                             jaspic-providers.xml  认证之类的，具体不知道
+#                              
+#             c) docs     tomcat说明文档，包括了这个tomcat的详细说明
+#             d) lib      libraray即公共java库文件，如果一个库文件需要被各种应用使用，可以放在这里，但注意如果在具体应用中也包含了相同类名的库文件，
+#                         则会报异常，所以建议不要放进来
+#             e) logs     日志文件
+#             f) temp     临时文件,比如编译jsp文件生成的过度文件？，不用管它
+#             g) webapps  网站应用目录文件，上传到此文件夹下就可以通过url来访问了，其中ROOT文件夹下的就是默认网站应用,
+#                         即访问时不需要 网址/应用文件夹名字/内部网址，直接 网址/内部网址就可以了
+#             h) work     web应用的java文件所在位置，现在webapps/应用文件夹名字/WEB-INF/classes/下生成，然后复制源文件和字节文件到 work\Catalina\localhost\应用文件夹名字
+#      
+#       4. 文件夹补充说明
+#             webapps中web应用文件夹结构说明
+#                         webProject/         
+#                         webProject/自定义文件夹           直接访问路径，即在此内的文件可以直接被外部访问
+#                         webProject/META-INF               这个是java的东西和一些配置文件
+#                         webProject/WEB-INF                这个是安全目录，即在此处的文件不可以被外部直接访问，即redirct重定向不能指向此文件夹内部文件，
+#                                                           但可以转发到此文件夹内部文件，同时包含了web应用核心配置文件web.xml
+#
+# web应用基本组成：
+#       1. java代码
+#             servlet类，即继承了HttpServlet类的类，需要在web中配置servlet和servlet-mapping配置才能被外部访问，或则通过java注解来快捷配置，即@WebServlet("url")
+#             修改后需要重启服务器才能生效，在debug模式下不需要重启
+#
+#       2. 网页文件
+#             jsp文件修改后会被自动更新，不需要重启服务器
+#
+#       3. url
+#             a) 组成为 路径?paramName=paramValue&...
+#             b) 大小写敏感
+#             c) 在browser中根路径是 网址/，但在web应用的服务器上跟路径是 网址/项目
+#             d) post提交方式中，action中直接加?paramName=paramValue是有效的，单get提交方式是无效的
+#       4. jar
+#             导入到lib文件夹内的jar包会在会自动生成在Web App Libraries中
+#
+#
+# 常见异常：
+#          严重: ContainerBase.addChild: start: 
+#          org.apache.catalina.LifecycleException: Failed to start component
+#          
+#          web.xml配置出错了，可能在url-pattern中少了开头的/
+#
