@@ -19,8 +19,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
+<body>
+	<!-- the enctype is necessary and method="post" guarantee that large file can also be uploaded -->
+	<form action="test/file_upload" enctype="multipart/form-data" method="post">
+		<input type="file" name="file" />
+		<input type="file" name="file" />
+		<input type="submit" value="上传"/>
+	</form>
+</body>
 </html>

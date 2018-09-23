@@ -22,9 +22,10 @@
 	<!-- namespace就是在浏览器项目名后面必须根的子目录名 -->
 	<package name="default" namespace="/test" extends="struts-default">
 
+		<!-- 拦截器 -->
 		<interceptors>
 			<interceptor name="loginFilter" class="com.jdl.filter.HelloWorldFilter"></interceptor>
-			<interceptor-stack name="myINterceptorStack">
+			<interceptor-stack name="myInterceptorStack">
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 				<interceptor-ref name="loginFilter"></interceptor-ref>
 			</interceptor-stack>
@@ -48,13 +49,17 @@
 
 		<action name="source">
 			<!-- 拦截器名字可以是拦截器名字，也可以是拦截器栈的名字 -->
-			<interceptor-ref name="myINterceptorStack"></interceptor-ref>
+			<interceptor-ref name="myInterceptorStack"></interceptor-ref>
 			<result name="login">
 				/login.jsp
 			</result>
 			<result name="source">
 				/WEB-INF/jsp/source.jsp
 			</result>
+		</action>
+		
+		<action name="file_*" class="com.jdl.file.FileAction" method="{1}" >
+			<result name="file">/WEB-INF/jsp/file.jsp</result>
 		</action>
 	</package>
 </struts>
