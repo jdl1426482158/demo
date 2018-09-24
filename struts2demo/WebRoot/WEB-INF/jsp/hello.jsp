@@ -23,6 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <form action="test/hello" method="post" accept="image/jpeg,image/gif">
+    	<input name="param" />  <br>
+    	<input name="params" /> <br>
+    	<input name="params" /> <br>
+    	<input type="submit" value="提交" />
+    </form> <br>
   </body>
 </html>
