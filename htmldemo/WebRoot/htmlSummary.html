@@ -1,0 +1,126 @@
+<!Doctype html>
+<html>
+
+	<head>
+		<title>下拉列表联动</title>
+
+		<meta http-equiv="expires" content="31 Dec 2008" />
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<link rel="stylesheet" href="css/index2.css" />
+		<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/index2.js" defer="defer"></script>
+	</head>
+
+	<body>
+		<!--
+        	一、基本构成
+        		<!Doctype html>							定义文档类型
+        		<html>
+        		<head>
+        			可以有的标签:
+        		 		<meta content="text/html charset=gb2312" http-equiv="Content-type[,content-type,expires,refresh,set-cookie]" />	
+        		 																				[发送实际文档之前发送，给浏览器提供的信息]
+        		 																				[某些搜索引擎在遇到这些关键字时，会用这些关键字对文档进行分类。]
+        		 		<meta content="cNitg6enc2" name="baidu-site-verification[author,description,keywords,generator,revised,others]">
+        		 																				[给其他访问网页的提供的信息，如搜索引擎，其他引用者]
+        		 																				[把 content 属性关联到一个名称。]
+        		 																				[如果没有提供 name 属性，那么名称/值对中的名称会采用 http-equiv 属性的值。]
+        		 				例子
+        		 						<meta http-equiv="Refresh" content="n;url=http://yourlink">
+        		 						<meta http-equiv="Content-Type" content="text/html;charset=gb_2312-80">
+        		 						<meta name="description" content="网络营销教学网站提供《网络营销基础与实践》
+        		 								教学支持:网络营销课件,网络营销论文,网络营销实验教学,电子商务论文,网络营销与电子商务书籍等">
+        		 								
+        		 		<link rel="stylesheet" type="text/css" href="theme.css" />				
+        		 		<link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16[只有当被链接资源是图标时 (rel="icon")，才能使用该属性。]" />
+        		 				rel可以取的值[alternate,author,help,icon,licence,next,pingback,prefetch,prev,search,sidebar,stylesheet,tag]		 																				
+        		 																				[引入外部文件]
+        		 																				
+        		 		<script type="text/javascript" >js代码</script>
+        		 		<script charset="外部脚本编码" src="脚本路径" defer="defer[表示脚本延迟执行,没什么用]"> </script>
+        		 		<script src="url[类似于java的导入library]"></script>
+        		 		
+        		 		<style type="text/css" media="[all,screen,print,tv,projection,handheld,tty,braille,aural]"></style>
+											值			描述
+											screen		计算机屏幕（默认值）。
+											tty			电传打字机以及使用等宽字符网格的类似媒介。
+											tv			电视类型设备（低分辨率、有限的屏幕翻滚能力）。
+											projection	放映机。
+											handheld	手持设备（小屏幕、有限的带宽）。
+											print		打印预览模式 / 打印页。
+											braille		盲人用点字法反馈设备。
+											aural		语音合成器。
+											all	适合所有设备。
+        		 		<title>title</title>
+        		</head>
+        		<body>
+        			标签格式分类:
+        					单标签（没有innerHTML（即开始标签和结束标签之间的内容）属性,一般需要文本信息，用value属性：
+        							例子：
+        								<hr />,<br />,<img src="path" />,<input type="button" value="button"/>
+        						
+        					双标签（有innerHTML属性，成对出现）:
+        							例子：
+        								<button>button</button>,<h1>文本</h1>,<a href="#">超链接</a>
+        			
+        					组合标签(固定格式出现)
+        							例子：
+        								<table>
+        									<thead>
+        										<tr>
+        											<td></td>
+        										</tr>
+        									</thead>
+        									<tbody>
+        										<tr>
+        											<td></td>
+        										</tr>
+        									</tbody>
+        									<tfoot>
+        										<tr>
+        											<td></td>
+        										</tr>
+        									</tfoot>
+        								</table>
+        								
+        								<ul>													[无序列表]
+        									<li></li>
+        									<li></li>
+        								</ul>
+        								
+        								<ol>													[有序列表]
+        									<li></li>
+        									<li></li>
+        								</ol>
+        								<select>												[选择框]
+        									<option></option>
+        									<option></option>
+        								</select>
+        					
+        			标签性质分类:
+        					块状标签(block)：独占一行，可以设置width,height
+        							例子：
+        								<h1></h1>,<div></div>
+        								
+        								
+        					行内标签(inline): 同行显示，width,height由内部元素决定
+        							例子：
+        								<font></font>,<a></a>
+        								
+        								
+        					行内替换元素（inline-block，replaced inline element）
+        							例子：
+        								<img />
+        								
+        			标签内容分类:
+        					效果标签：
+        							例子：
+        								<br />,<hr />
+        					
+        					修饰标签(没给特定属性，不起作用):
+        							<div></div>,<a href="url"></a>
+        		</body>
+        		</html>
+        -->
+	</body>
+</html>
