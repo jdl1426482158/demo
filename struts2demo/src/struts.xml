@@ -20,7 +20,7 @@
 
 	<!-- 包名是用来被其他包继承用的，一般需要继承struts-default，里面包含了所有struts中常用的属性的定义 或则自己配齐所有必须元素 -->
 	<!-- namespace就是在浏览器项目名后面必须根的子目录名 -->
-	<package name="default" namespace="/test" extends="struts-default">
+	<package name="default" namespace="/test" extends="json-default">
 
 		<!-- 拦截器 -->
 		<interceptors>
@@ -79,6 +79,14 @@
 				<param name="inputName">input</param>
 				<param name="contentDisposition">attachment;filename=${fileName}</param>
 				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		
+		<action name="json" class="com.jdl.json.JsonAction" method="json">
+			<result name="ajax">/WEB-INF/jsp/ajax.jsp</result>
+			<result name="json" type="json">
+				<!-- 返回json数据的根对象，默认为action -->
+				<param name="root">result</param>
 			</result>
 		</action>
 	</package>
