@@ -47,9 +47,15 @@
 
 包说明
 
-注解
+注解:
 	strut2-convention-plugin-2.3.35
+	
+json:
+	strut2-json-plugin-*.*.*.jar
 
+文件处理:
+	commons-fileupload-*.*.*.jar
+	commons-io-*.*.jar
 
 
 

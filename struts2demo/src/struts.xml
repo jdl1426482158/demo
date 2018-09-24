@@ -12,7 +12,7 @@
 	<!-- 浏览器缓存 -->
 	<constant name="struts.serve.static.browserCache" value="false"></constant>
 	<!-- 动态加载，考虑到安全性默认关闭 -->
-	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
 	<!-- action的后缀，就是在url中访问action时在action的名字后面添加的东西 -->
 	<constant name="struts.action.extension" value="action,do,go,,"></constant>
 	<!-- 开发者模式 -->
@@ -30,6 +30,13 @@
 				<interceptor-ref name="loginFilter"></interceptor-ref>
 			</interceptor-stack>
 		</interceptors>
+
+		<action name="hello" class="com.jdl.action.HelloAction" method="test">
+			<result name="success">/WEB-INF/jsp/hello.jsp</result>
+		</action>
+		<action name="hello1" class="com.jdl.action.HelloAction">
+			<result name="success">/WEB-INF/jsp/hello1.jsp</result>
+		</action>
 
 		<!-- name就是url中用到的东西，访问url时，在namespace和action_name中间可以任意添加东西不影响访问 -->
 		<!-- class就是action对应执行的action类即， method就是action类中在被访问action是被调用的类 class类默认为ActionSupport类，返回数据为"success" 
@@ -57,9 +64,23 @@
 				/WEB-INF/jsp/source.jsp
 			</result>
 		</action>
-		
-		<action name="file_*" class="com.jdl.file.FileAction" method="{1}" >
+
+		<action name="file_*" class="com.jdl.file.FileAction" method="{1}">
 			<result name="file">/WEB-INF/jsp/file.jsp</result>
+			<!-- 这里设置为其他方法后，还是回调到execute方法去执行下载任务 -->
+			<result name="download" type="chain">startDownload_execute</result>
+			<!-- stream不能有name否者变成了字符串result-type了 -->
+			<allowed-methods>upload,list</allowed-methods>
+		</action>
+
+		<!-- action类必须继承AcionSupport -->
+		<action name="startDownload_*" class="com.jdl.file.FileAction" method="{1}">
+			<result name="file">/WEB-INF/jsp/file.jsp</result>
+			<result type="stream">
+				<param name="inputName">in</param>
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="bufferSize">4096</param>
+			</result>
 		</action>
 	</package>
 </struts>
