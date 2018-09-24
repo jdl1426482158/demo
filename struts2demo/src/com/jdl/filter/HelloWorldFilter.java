@@ -31,7 +31,9 @@ public class HelloWorldFilter implements Interceptor {
 
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
-		// TODO Auto-generated method stub
+		//一般都要在struts中增加默认的拦截器
+		//默认拦截器功能包括传递参数，文件上传等
+		//先走拦截器，然后invoke唤醒action，之后再回到拦截器
 		Map<String, Object> session = ServletActionContext.getContext().getSession();
 		if (session.get("user") == null)
 			return "login";
