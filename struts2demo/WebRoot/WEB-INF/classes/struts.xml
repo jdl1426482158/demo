@@ -41,7 +41,7 @@
 		<!-- name就是url中用到的东西，访问url时，在namespace和action_name中间可以任意添加东西不影响访问 -->
 		<!-- class就是action对应执行的action类即， method就是action类中在被访问action是被调用的类 class类默认为ActionSupport类，返回数据为"success" 
 			method默认为execute方法 -->
-		<action class="com.jdl.test.LoginAction" name="login" method="login">
+		<action class="com.jdl.action.LoginAction" name="login" method="login">
 			<!-- 用来设置action中的默认值，如果传入url参数包含对应参数的话，那么就不起作用，自动通过set方法来设置值 -->
 			<param name="test">HelloWorld</param>
 			<!-- name就是action方法返回时需要执行那个结果，默认为success type=就是result需要执行的方式，具体的可以在struts-default中看到，常用的有 
@@ -49,7 +49,10 @@
 				stream 文件传输的时候用到 -->
 			<!-- 这个参数注入是返回结果后注入 -->
 			<result name="success" type="dispatcher">
-				/showMessage.jsp
+				/WEB-INF/jsp/showMessage.jsp
+			</result>
+			<result name="input">
+				/WEB-INF/jsp/login.jsp
 			</result>
 		</action>
 
@@ -57,7 +60,7 @@
 		<action name="source">
 			<!-- 拦截器名字可以是拦截器名字，也可以是拦截器栈的名字 -->
 			<interceptor-ref name="myInterceptorStack"></interceptor-ref>
-			<result name="login">
+			<result name="input">
 				/login.jsp
 			</result>
 			<result name="source">
@@ -66,7 +69,8 @@
 		</action>
 
 		<!-- 上传文件 -->
-		<action name="upload" class="com.jdl.file.FileUploadAction" method="upload">
+		<action name="upload" class="com.jdl.file.FileUploadAction"
+			method="upload">
 			<result name="upload">/WEB-INF/jsp/upload.jsp</result>
 			<!-- 这里设置为其他方法后，还是回调到execute方法去执行下载任务 -->
 		</action>
@@ -81,7 +85,8 @@
 				<param name="bufferSize">4096</param>
 			</result>
 		</action>
-		
+
+		<!-- ajax返回json对象 -->
 		<action name="json" class="com.jdl.json.JsonAction" method="json">
 			<result name="ajax">/WEB-INF/jsp/ajax.jsp</result>
 			<result name="json" type="json">
@@ -89,5 +94,13 @@
 				<param name="root">result</param>
 			</result>
 		</action>
+
+		<!-- 发送邮件 -->
+		<action name="mail" class="com.jdl.action.MailAction">
+			<result name="mail">/WEB-INF/jsp/mail.jsp</result>
+			<result name="success">/WEB-INF/jsp/mailsuccess.jsp</result>
+			<result name="error">/WEB-INF/jsp/mailerror.jsp</result>
+		</action>
+
 	</package>
 </struts>

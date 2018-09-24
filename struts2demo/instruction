@@ -40,9 +40,12 @@
 
 
 
-
-
-
+碰到的错误说明
+	404一般就是项目没有加载，或者web.xml没有配置号,或则result中设置的文件路径不正确
+	
+	struts异常的基本是配置文件有问题,基本配置错误的不用说
+	
+	package中的元素是有顺序的不要弄错了
 
 
 包说明
@@ -57,6 +60,8 @@ json:
 	commons-fileupload-*.*.*.jar
 	commons-io-*.*.jar
 
+邮件需要
+	mail.jar
 
 
 

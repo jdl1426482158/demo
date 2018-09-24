@@ -27,6 +27,8 @@ import com.opensymphony.xwork2.ActionSupport;
 /**
  * 不要狗血啊，命名空间必须要以斜杠开头啊,写类名的时候不要有空格啊
  * 注解改变后不起作用的话，可能需要重启才能生效
+ * 不需要取web.xml文件中设置init-param
+ * 直接通过默认规范来搜索注解action
  * 
  * @author jdl
  * 
