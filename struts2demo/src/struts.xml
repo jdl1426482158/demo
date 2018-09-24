@@ -65,19 +65,18 @@
 			</result>
 		</action>
 
-		<action name="file_*" class="com.jdl.file.FileAction" method="{1}">
-			<result name="file">/WEB-INF/jsp/file.jsp</result>
+		<!-- 上传文件 -->
+		<action name="upload" class="com.jdl.file.FileUploadAction" method="upload">
+			<result name="upload">/WEB-INF/jsp/upload.jsp</result>
 			<!-- 这里设置为其他方法后，还是回调到execute方法去执行下载任务 -->
-			<result name="download" type="chain">startDownload_execute</result>
-			<!-- stream不能有name否者变成了字符串result-type了 -->
-			<allowed-methods>upload,list</allowed-methods>
 		</action>
 
-		<!-- action类必须继承AcionSupport -->
-		<action name="startDownload_*" class="com.jdl.file.FileAction" method="{1}">
-			<result name="file">/WEB-INF/jsp/file.jsp</result>
-			<result type="stream">
-				<param name="inputName">in</param>
+		<!-- 下载文件 -->
+		<action name="download" class="com.jdl.file.FileDownloadAction"
+			method="download">
+			<result name="download">/WEB-INF/jsp/download.jsp</result>
+			<result name="startDownload" type="stream">
+				<param name="inputName">input</param>
 				<param name="contentDisposition">attachment;filename=${fileName}</param>
 				<param name="bufferSize">4096</param>
 			</result>

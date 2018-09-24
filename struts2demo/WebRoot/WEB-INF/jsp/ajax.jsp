@@ -10,6 +10,7 @@
 <head>
 <base href="<%=basePath%>">
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<title>ajax</title>
 <script type="text/javascript">
 	$("#jquery_ajax").click(function() {
 		$.ajax({

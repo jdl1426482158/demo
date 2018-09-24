@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>upload</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -21,11 +21,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
 <body>
 	<!-- the enctype is necessary and method="post" guarantee that large file can also be uploaded -->
-	<form action="test/file_upload" enctype="multipart/form-data" method="post">
+	<form action="test/upload" enctype="multipart/form-data" method="post">
 		<input type="file" name="file" />
 		<input type="file" name="file" />
 		<input type="submit" value="上传"/>
 	</form>
-	<a href="test/startDownload?fileName=example.jpg">下载样例图片</a>
 </body>
 </html>

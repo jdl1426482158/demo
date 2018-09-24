@@ -9,8 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>login</title>
-    
+    <title>download</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -19,15 +18,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
   </head>
-  
-  <body>
-  <form action="login" method="post">
-    用户名: <input type="text" name="user" /><br />
-    密码: <input type="password" name="pwd" /><br />
-    <input type="submit" value="提交" />
-    <input type="reset" value="取消" />
-    </form>
-  </body>
+<body>
+	<a href="test/download?fileName=example.jpg">下载样例图片</a>
+</body>
 </html>
