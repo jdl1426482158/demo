@@ -10,4 +10,13 @@ public class HelloWorld {
 	public void getMessage() {
 		System.out.println("Your Message : " + message);
 	}
+	
+	public void init(){
+		System.out.println("HelloWorld init");
+	}
+	
+	public void destroy(){
+		System.out.println("HelloWorld destroy");
+	}
+	
 }
