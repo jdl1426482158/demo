@@ -12,7 +12,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="E:/source/java/jar/R/REngine.jar"/>
 	<classpathentry kind="lib" path="E:/source/java/jar/R/RserveEngine.jar"/>
-	<classpathentry kind="lib" path="D:/studysoft/R-3.4.2/library/rJava/jri/JRI.jar" sourcepath="F:/Download/chrome/rJava_0.9-5.zip"/>
 	<classpathentry kind="lib" path="E:/source/java/jar/jna/jna-4.5.1.jar" sourcepath="E:/source/java/jar/jna/jna-master/src"/>
+	<classpathentry kind="lib" path="E:/source/java/jar/R/JRI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
