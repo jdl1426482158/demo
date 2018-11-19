@@ -1,6 +1,6 @@
 package multithread.a_simple;
 
-public class ThreadCreator {
+public class ThreadCreatorDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

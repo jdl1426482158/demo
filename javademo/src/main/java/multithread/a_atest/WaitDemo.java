@@ -3,7 +3,7 @@ package multithread.a_atest;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Wait {
+public class WaitDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

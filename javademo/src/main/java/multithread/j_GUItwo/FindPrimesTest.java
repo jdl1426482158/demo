@@ -19,7 +19,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 
-public class FindPrimes extends JFrame{
+public class FindPrimesTest extends JFrame{
 
 	/**
 	 * 
@@ -34,7 +34,7 @@ public class FindPrimes extends JFrame{
 	private PrimeCalculator calculator;
 	
 	//constructor 
-	public FindPrimes()
+	public FindPrimesTest()
 	{
 		super( "Finding Primes with SwingWorker");
 		setLayout(new BorderLayout());
@@ -122,7 +122,7 @@ public class FindPrimes extends JFrame{
 	
 	public static void main(String[] args)
 	{
-		FindPrimes application = new FindPrimes();
+		FindPrimesTest application = new FindPrimesTest();
 		application.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	

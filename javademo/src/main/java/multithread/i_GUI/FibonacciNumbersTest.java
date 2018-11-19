@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
-public class FibonacciNumbers extends JFrame{
+public class FibonacciNumbersTest extends JFrame{
 	/**
 	 * 
 	 */
@@ -34,7 +34,7 @@ public class FibonacciNumbers extends JFrame{
 			new JLabel(String.valueOf(n2));
 	private final JButton nextNumberJButton = new JButton("Next Number");
 	
-	public FibonacciNumbers()
+	public FibonacciNumbersTest()
 	{
 		super("Fibonacci Numbers");
 		setLayout (new GridLayout(2,1,10,10 ) );
@@ -100,7 +100,7 @@ public class FibonacciNumbers extends JFrame{
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FibonacciNumbers application = new FibonacciNumbers();
+		FibonacciNumbersTest application = new FibonacciNumbersTest();
 		application.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
