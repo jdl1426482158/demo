@@ -8,7 +8,7 @@ public class ThreadRunA {
 			while (true) {
 				try {
 					Thread.sleep(1000);
-					System.out.println("²Â²ÂÎÒÊÇË­");
+					System.out.println("çŒœçŒœæˆ‘æ˜¯è°");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

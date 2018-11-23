@@ -42,7 +42,7 @@ public class FindPrimesTest extends JFrame{
 		//initialize panel to get a number from the user
 		JPanel northJPanel = new JPanel();
 		northJPanel.add(new JLabel("Find primes less than: "));
-		highestPrimeJTextField.setColumns(5);           //ÎÄ±¾¿ò¿í¶È
+		highestPrimeJTextField.setColumns(5);           //æ–‡æœ¬æ¡†å®½åº¦
 		northJPanel.add(highestPrimeJTextField);
 		getPrimesJButton.addActionListener(
 				new ActionListener()

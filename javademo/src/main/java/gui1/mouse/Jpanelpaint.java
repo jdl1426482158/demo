@@ -1,11 +1,11 @@
 package gui1.mouse;
 
-/*Õâ¸ö³ÌĞòÉè¼ÆÄ¿µÄÊÇÓÃÊó±êÍÏ¶¯Í¼ĞÎ
- *ÆäÖĞÓĞÒ»ÌõÓï¾ä³öÎÊÌâÁË£¬ÓÃ//È¥µôÁË£¬ºóÃæ×¢Ã÷ÁËÎÊÌâÓï¾ä
- * Ã»ÄÇÌõÓï¾äÊ±³ÌĞòÕı³£ÔËĞĞ£¬¼´Êó±êÍÏ¶¯n´Îºó£¬mouseDragged×Ü¹²±»Ö´ĞĞn´Î£¬
+/*è¿™ä¸ªç¨‹åºè®¾è®¡ç›®çš„æ˜¯ç”¨é¼ æ ‡æ‹–åŠ¨å›¾å½¢
+ *å…¶ä¸­æœ‰ä¸€æ¡è¯­å¥å‡ºé—®é¢˜äº†ï¼Œç”¨//å»æ‰äº†ï¼Œåé¢æ³¨æ˜äº†é—®é¢˜è¯­å¥
+ * æ²¡é‚£æ¡è¯­å¥æ—¶ç¨‹åºæ­£å¸¸è¿è¡Œï¼Œå³é¼ æ ‡æ‹–åŠ¨næ¬¡åï¼ŒmouseDraggedæ€»å…±è¢«æ‰§è¡Œnæ¬¡ï¼Œ
  *
- * ÓĞÁËÄÇÌõÓï¾äºó£¬Êó±êÍÏ¶¯Ò»´Î£¬mouseDragged×Ü¹²±»Ö´ĞĞ2^n-1£¬
- * ÕâÊÇÊ²Ã´Ô­Òò°¡£¬´úÂë¸Ä¸Ä³ÉÔõÃ´Ñù°¡
+ * æœ‰äº†é‚£æ¡è¯­å¥åï¼Œé¼ æ ‡æ‹–åŠ¨ä¸€æ¬¡ï¼ŒmouseDraggedæ€»å…±è¢«æ‰§è¡Œ2^n-1ï¼Œ
+ * è¿™æ˜¯ä»€ä¹ˆåŸå› å•Šï¼Œä»£ç æ”¹æ”¹æˆæ€ä¹ˆæ ·å•Š
  * 
  */
 
@@ -25,7 +25,7 @@ public class Jpanelpaint extends JPanel{
 	private boolean hasClicked=false;
 	private boolean isInRect=false;
 	private int xpoint;
-	private int ypoint;//ÉÏÒ»´ÎµÄÊó±êÖ¸ÕëµÄ×ø±ê
+	private int ypoint;//ä¸Šä¸€æ¬¡çš„é¼ æ ‡æŒ‡é’ˆçš„åæ ‡
 	
 	
 	public Jpanelpaint(){
@@ -43,20 +43,20 @@ public class Jpanelpaint extends JPanel{
 			// TODO Auto-generated method stub
 			int keyCode = e.getKeyCode();
 			
-	        switch (keyCode) {//ÅĞ¶Ï¼üÅÌÖµ
+	        switch (keyCode) {//åˆ¤æ–­é”®ç›˜å€¼
 			
 			case 37:
 				x-=3;
-				break;// ×ó
+				break;// å·¦
 			case 38:
 				y-=3;
-				break;// ÉÏ
+				break;// ä¸Š
 			case 39:
 				x+=3;
-				break;// ÓÒ
+				break;// å³
 			case 40:
 				y+=3;
-				break;// ÏÂ
+				break;// ä¸‹
 	        }
 	        if(x<0)
 	        	x=0;
@@ -97,7 +97,7 @@ public class Jpanelpaint extends JPanel{
 				if(y<0) y=0;
 				Graphics g=Jpanelpaint.this.getGraphics();
 			    Jpanelpaint.this.paintComponent(g);
-			    //Jpanelpaint.this.paintComponent(g);    ÓÃÀ´Êó±êÍÏ¶¯·¢ÉúºóÖØĞÂ»æÖÆÍ¼Ïñ                   ÎÊÌâÓï¾ä
+			    //Jpanelpaint.this.paintComponent(g);    ç”¨æ¥é¼ æ ‡æ‹–åŠ¨å‘ç”Ÿåé‡æ–°ç»˜åˆ¶å›¾åƒ                   é—®é¢˜è¯­å¥
 			}
 		}
 		@Override
@@ -109,7 +109,7 @@ public class Jpanelpaint extends JPanel{
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			// TODO Auto-generated method stub
-			Jpanelpaint.this.requestFocus();//ÊÇÃæ°å¾Û½¹¼üÅÌÊÂ¼ş
+			Jpanelpaint.this.requestFocus();//æ˜¯é¢æ¿èšç„¦é”®ç›˜äº‹ä»¶
 			
 		}
 
@@ -121,7 +121,7 @@ public class Jpanelpaint extends JPanel{
 			ypoint=e.getY();
 			hasClicked=true;
 			isInRect=xpoint>=x&&xpoint<=x+width&&ypoint>=y&&ypoint<=y+height;
-			//ÅĞ¶ÏÊó±êÊÇ·ñÂäÔÚÁËÍ¼ĞÎÄÚ
+			//åˆ¤æ–­é¼ æ ‡æ˜¯å¦è½åœ¨äº†å›¾å½¢å†…
 		}
 
 		@Override

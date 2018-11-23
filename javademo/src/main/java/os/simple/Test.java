@@ -5,34 +5,34 @@ import java.util.Properties;
 public class Test{
 
 public static void main (String args[]){
-Properties props=System.getProperties(); //ÏµÍ³ÊôĞÔ
-System.out.println("JavaµÄÔËĞĞ»·¾³°æ±¾£º"+props.getProperty("java.version"));
-System.out.println("JavaµÄÔËĞĞ»·¾³¹©Ó¦ÉÌ£º"+props.getProperty("java.vendor"));
-System.out.println("Java¹©Ó¦ÉÌµÄURL£º"+props.getProperty("java.vendor.url"));
-System.out.println("JavaµÄ°²×°Â·¾¶£º"+props.getProperty("java.home"));
-System.out.println("JavaµÄĞéÄâ»ú¹æ·¶°æ±¾£º"+props.getProperty("java.vm.specification.version"));
-System.out.println("JavaµÄĞéÄâ»ú¹æ·¶¹©Ó¦ÉÌ£º"+props.getProperty("java.vm.specification.vendor"));
-System.out.println("JavaµÄĞéÄâ»ú¹æ·¶Ãû³Æ£º"+props.getProperty("java.vm.specification.name"));
-System.out.println("JavaµÄĞéÄâ»úÊµÏÖ°æ±¾£º"+props.getProperty("java.vm.version"));
-System.out.println("JavaµÄĞéÄâ»úÊµÏÖ¹©Ó¦ÉÌ£º"+props.getProperty("java.vm.vendor"));
-System.out.println("JavaµÄĞéÄâ»úÊµÏÖÃû³Æ£º"+props.getProperty("java.vm.name"));
-System.out.println("JavaÔËĞĞÊ±»·¾³¹æ·¶°æ±¾£º"+props.getProperty("java.specification.version"));
-System.out.println("JavaÔËĞĞÊ±»·¾³¹æ·¶¹©Ó¦ÉÌ£º"+props.getProperty("java.specification.vender"));
-System.out.println("JavaÔËĞĞÊ±»·¾³¹æ·¶Ãû³Æ£º"+props.getProperty("java.specification.name"));
-System.out.println("JavaµÄÀà¸ñÊ½°æ±¾ºÅ£º"+props.getProperty("java.class.version"));
-System.out.println("JavaµÄÀàÂ·¾¶£º"+props.getProperty("java.class.path"));
-System.out.println("¼ÓÔØ¿âÊ±ËÑË÷µÄÂ·¾¶ÁĞ±í£º"+props.getProperty("java.library.path"));
-System.out.println("Ä¬ÈÏµÄÁÙÊ±ÎÄ¼şÂ·¾¶£º"+props.getProperty("java.io.tmpdir"));
-System.out.println("Ò»¸ö»ò¶à¸öÀ©Õ¹Ä¿Â¼µÄÂ·¾¶£º"+props.getProperty("java.ext.dirs"));
-System.out.println("²Ù×÷ÏµÍ³µÄÃû³Æ£º"+props.getProperty("os.name"));
-System.out.println("²Ù×÷ÏµÍ³µÄ¹¹¼Ü£º"+props.getProperty("os.arch"));
-System.out.println("²Ù×÷ÏµÍ³µÄ°æ±¾£º"+props.getProperty("os.version"));
-System.out.println("ÎÄ¼ş·Ö¸ô·û£º"+props.getProperty("file.separator")); //ÔÚ unix ÏµÍ³ÖĞÊÇ¡±£¯¡±
-System.out.println("Â·¾¶·Ö¸ô·û£º"+props.getProperty("path.separator")); //ÔÚ unix ÏµÍ³ÖĞÊÇ¡±:¡±
-System.out.println("ĞĞ·Ö¸ô·û£º"+props.getProperty("line.separator")); //ÔÚ unix ÏµÍ³ÖĞÊÇ¡±/n¡±
-System.out.println("ÓÃ»§µÄÕË»§Ãû³Æ£º"+props.getProperty("user.name"));
-System.out.println("ÓÃ»§µÄÖ÷Ä¿Â¼£º"+props.getProperty("user.home"));
-System.out.println("ÓÃ»§µÄµ±Ç°¹¤×÷Ä¿Â¼£º"+props.getProperty("user.dir"));
+Properties props=System.getProperties(); //ç³»ç»Ÿå±æ€§
+System.out.println("Javaçš„è¿è¡Œç¯å¢ƒç‰ˆæœ¬ï¼š"+props.getProperty("java.version"));
+System.out.println("Javaçš„è¿è¡Œç¯å¢ƒä¾›åº”å•†ï¼š"+props.getProperty("java.vendor"));
+System.out.println("Javaä¾›åº”å•†çš„URLï¼š"+props.getProperty("java.vendor.url"));
+System.out.println("Javaçš„å®‰è£…è·¯å¾„ï¼š"+props.getProperty("java.home"));
+System.out.println("Javaçš„è™šæ‹Ÿæœºè§„èŒƒç‰ˆæœ¬ï¼š"+props.getProperty("java.vm.specification.version"));
+System.out.println("Javaçš„è™šæ‹Ÿæœºè§„èŒƒä¾›åº”å•†ï¼š"+props.getProperty("java.vm.specification.vendor"));
+System.out.println("Javaçš„è™šæ‹Ÿæœºè§„èŒƒåç§°ï¼š"+props.getProperty("java.vm.specification.name"));
+System.out.println("Javaçš„è™šæ‹Ÿæœºå®ç°ç‰ˆæœ¬ï¼š"+props.getProperty("java.vm.version"));
+System.out.println("Javaçš„è™šæ‹Ÿæœºå®ç°ä¾›åº”å•†ï¼š"+props.getProperty("java.vm.vendor"));
+System.out.println("Javaçš„è™šæ‹Ÿæœºå®ç°åç§°ï¼š"+props.getProperty("java.vm.name"));
+System.out.println("Javaè¿è¡Œæ—¶ç¯å¢ƒè§„èŒƒç‰ˆæœ¬ï¼š"+props.getProperty("java.specification.version"));
+System.out.println("Javaè¿è¡Œæ—¶ç¯å¢ƒè§„èŒƒä¾›åº”å•†ï¼š"+props.getProperty("java.specification.vender"));
+System.out.println("Javaè¿è¡Œæ—¶ç¯å¢ƒè§„èŒƒåç§°ï¼š"+props.getProperty("java.specification.name"));
+System.out.println("Javaçš„ç±»æ ¼å¼ç‰ˆæœ¬å·ï¼š"+props.getProperty("java.class.version"));
+System.out.println("Javaçš„ç±»è·¯å¾„ï¼š"+props.getProperty("java.class.path"));
+System.out.println("åŠ è½½åº“æ—¶æœç´¢çš„è·¯å¾„åˆ—è¡¨ï¼š"+props.getProperty("java.library.path"));
+System.out.println("é»˜è®¤çš„ä¸´æ—¶æ–‡ä»¶è·¯å¾„ï¼š"+props.getProperty("java.io.tmpdir"));
+System.out.println("ä¸€ä¸ªæˆ–å¤šä¸ªæ‰©å±•ç›®å½•çš„è·¯å¾„ï¼š"+props.getProperty("java.ext.dirs"));
+System.out.println("æ“ä½œç³»ç»Ÿçš„åç§°ï¼š"+props.getProperty("os.name"));
+System.out.println("æ“ä½œç³»ç»Ÿçš„æ„æ¶ï¼š"+props.getProperty("os.arch"));
+System.out.println("æ“ä½œç³»ç»Ÿçš„ç‰ˆæœ¬ï¼š"+props.getProperty("os.version"));
+System.out.println("æ–‡ä»¶åˆ†éš”ç¬¦ï¼š"+props.getProperty("file.separator")); //åœ¨ unix ç³»ç»Ÿä¸­æ˜¯â€ï¼â€
+System.out.println("è·¯å¾„åˆ†éš”ç¬¦ï¼š"+props.getProperty("path.separator")); //åœ¨ unix ç³»ç»Ÿä¸­æ˜¯â€:â€
+System.out.println("è¡Œåˆ†éš”ç¬¦ï¼š"+props.getProperty("line.separator")); //åœ¨ unix ç³»ç»Ÿä¸­æ˜¯â€/nâ€
+System.out.println("ç”¨æˆ·çš„è´¦æˆ·åç§°ï¼š"+props.getProperty("user.name"));
+System.out.println("ç”¨æˆ·çš„ä¸»ç›®å½•ï¼š"+props.getProperty("user.home"));
+System.out.println("ç”¨æˆ·çš„å½“å‰å·¥ä½œç›®å½•ï¼š"+props.getProperty("user.dir"));
 
 }
 

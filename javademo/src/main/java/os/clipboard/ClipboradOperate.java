@@ -12,11 +12,11 @@ import java.io.IOException;
 public class ClipboradOperate {
     /**@Description: 
      * @author zhk
-     * @createtime 2012-7-12 ÉÏÎç11:33:06   
+     * @createtime 2012-7-12 ä¸Šåˆ11:33:06   
      * @param args
      */
     public static void main(String[] args) {
-        Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();//»ñÈ¡ÏµÍ³¼ôÌù°å
+        Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();//è·å–ç³»ç»Ÿå‰ªè´´æ¿
 
         try {
             ImageViewer im=new ImageViewer(getImageFromClipboard(clip));
@@ -27,30 +27,30 @@ public class ClipboradOperate {
         }
     }
     /**
-     * ´ÓÖ¸¶¨µÄ¼ôÇĞ°åÖĞ»ñÈ¡ÎÄ±¾ÄÚÈİ
-     * ±¾µØ¼ôÇĞ°åÊ¹ÓÃ Clipborad cp = new Clipboard("clip1"); À´¹¹Ôì
-     * ÏµÍ³¼ôÇĞ°åÊ¹ÓÃ  Clipboard sysc = Toolkit.getDefaultToolkit().getSystemClipboard();
-     * ¼ôÇĞ°åµÄÄÚÈİ   getContents(null); ·µ»ØTransferable
+     * ä»æŒ‡å®šçš„å‰ªåˆ‡æ¿ä¸­è·å–æ–‡æœ¬å†…å®¹
+     * æœ¬åœ°å‰ªåˆ‡æ¿ä½¿ç”¨ Clipborad cp = new Clipboard("clip1"); æ¥æ„é€ 
+     * ç³»ç»Ÿå‰ªåˆ‡æ¿ä½¿ç”¨  Clipboard sysc = Toolkit.getDefaultToolkit().getSystemClipboard();
+     * å‰ªåˆ‡æ¿çš„å†…å®¹   getContents(null); è¿”å›Transferable
      */
     protected static String getClipboardText() throws Exception{
-        Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();//»ñÈ¡ÏµÍ³¼ôÌù°å
-        // »ñÈ¡¼ôÇĞ°åÖĞµÄÄÚÈİ
+        Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();//è·å–ç³»ç»Ÿå‰ªè´´æ¿
+        // è·å–å‰ªåˆ‡æ¿ä¸­çš„å†…å®¹
         Transferable clipT = clip.getContents(null);
         if (clipT != null) {
-        // ¼ì²éÄÚÈİÊÇ·ñÊÇÎÄ±¾ÀàĞÍ
+        // æ£€æŸ¥å†…å®¹æ˜¯å¦æ˜¯æ–‡æœ¬ç±»å‹
         if (clipT.isDataFlavorSupported(DataFlavor.stringFlavor))
         return (String)clipT.getTransferData(DataFlavor.stringFlavor); 
         }
         return null;
     }
 
-     //Íù¼ôÇĞ°åĞ´ÎÄ±¾Êı¾İ
+     //å¾€å‰ªåˆ‡æ¿å†™æ–‡æœ¬æ•°æ®
      protected static void setClipboardText(Clipboard clip, String writeMe) {
          Transferable tText = new StringSelection(writeMe);
          clip.setContents(tText, null);
      }
 
-     // ´Ó¼ôÇĞ°å¶ÁÈ¡Í¼Ïñ
+     // ä»å‰ªåˆ‡æ¿è¯»å–å›¾åƒ
      public static Image getImageFromClipboard(Clipboard clip) throws Exception{
          //Clipboard sysc = Toolkit.getDefaultToolkit().getSystemClipboard();
          Transferable cc = clip.getContents(null);
@@ -60,7 +60,7 @@ public class ClipboradOperate {
          return (Image)cc.getTransferData(DataFlavor.imageFlavor);
          return null;
      }
-     // Ğ´Í¼Ïñµ½¼ôÇĞ°å
+     // å†™å›¾åƒåˆ°å‰ªåˆ‡æ¿
      protected static void setClipboardImage2(final Image image) {
          Transferable trans = new Transferable(){
 

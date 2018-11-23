@@ -1,7 +1,7 @@
 package gui1.notice;
 
 public class JVMInstance {
-	/*可以直接使用
+	/*鍙互鐩存帴浣跨敤
 	 * Toolkit
 	 * 
 	 * 
@@ -14,7 +14,7 @@ public class JVMInstance {
 	 * 
 	 * 
 	 * 
-	 * 不能直接使用
+	 * 涓嶈兘鐩存帴浣跨敤
 	 * Robot
 	 * Graphics
 	 * 

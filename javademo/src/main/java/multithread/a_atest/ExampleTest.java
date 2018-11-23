@@ -3,7 +3,7 @@ package multithread.a_atest;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-public class Example {
+public class ExampleTest {
 	
 	public static void getName(Object...s){
 		System.out.println(s.length);

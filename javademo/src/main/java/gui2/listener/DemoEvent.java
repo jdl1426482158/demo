@@ -6,8 +6,8 @@ public class DemoEvent extends java.util.EventObject {
 	 */
 	private static final long serialVersionUID = 1L;
 	public DemoEvent(Object source) {     
-      super(source);//source¡ªÊÂ¼şÔ´¶ÔÏó¡ªÈçÔÚ½çÃæÉÏ·¢ÉúµÄµã»÷°´Å¥ÊÂ¼şÖĞµÄ°´Å¥     
-       //ËùÓĞ Event ÔÚ¹¹ÔìÊ±¶¼ÒıÓÃÁË¶ÔÏó "source"£¬ÔÚÂß¼­ÉÏÈÏÎª¸Ã¶ÔÏóÊÇ×î³õ·¢ÉúÓĞ¹Ø Event µÄ¶ÔÏó     
+      super(source);//sourceâ€”äº‹ä»¶æºå¯¹è±¡â€”å¦‚åœ¨ç•Œé¢ä¸Šå‘ç”Ÿçš„ç‚¹å‡»æŒ‰é’®äº‹ä»¶ä¸­çš„æŒ‰é’®     
+       //æ‰€æœ‰ Event åœ¨æ„é€ æ—¶éƒ½å¼•ç”¨äº†å¯¹è±¡ "source"ï¼Œåœ¨é€»è¾‘ä¸Šè®¤ä¸ºè¯¥å¯¹è±¡æ˜¯æœ€åˆå‘ç”Ÿæœ‰å…³ Event çš„å¯¹è±¡     
     }     
     public void say() {     
            System.out.println("This is say method...");     

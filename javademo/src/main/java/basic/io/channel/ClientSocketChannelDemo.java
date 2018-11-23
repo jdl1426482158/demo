@@ -10,9 +10,9 @@ public class ClientSocketChannelDemo {
 
 	public void connectServer() throws IOException {
 		SocketChannel socketChannel = SocketChannel.open();
-		socketChannel.configureBlocking(false);					//ÉèÖÃ non-block
+		socketChannel.configureBlocking(false);					//è®¾ç½® non-block
 		socketChannel.connect(new InetSocketAddress("127.0.0.1", 9999));
-		socketChannel.finishConnect();							//ÒòÎªÊÇ·Ç×èÈû£¬ËùÒÔÃ»ÓĞÍê³ÉÁ¬½Ó¾Í»áÍùÏÂÖ´ĞĞ£¬ËùÒÔĞèÒª´Ëº¯Êı±£Ö¤Á¬½ÓÍê³É¡£
+		socketChannel.finishConnect();							//å› ä¸ºæ˜¯éé˜»å¡ï¼Œæ‰€ä»¥æ²¡æœ‰å®Œæˆè¿æ¥å°±ä¼šå¾€ä¸‹æ‰§è¡Œï¼Œæ‰€ä»¥éœ€è¦æ­¤å‡½æ•°ä¿è¯è¿æ¥å®Œæˆã€‚
 		ByteBuffer byteBuffer = ByteBuffer.allocate(size);
 		while (socketChannel.isConnected()) {
 			byteBuffer.put(new String("hello server\n").getBytes());
@@ -22,7 +22,7 @@ public class ClientSocketChannelDemo {
 			}
 			byteBuffer.clear();
 		}
-		socketChannel.close();					//¹Ø±ÕÍ¨µÀ£¬Í¬Ê±¹Ø±ÕIO£¬¼´ÏòÁ÷Êä³östream-end,È»ºó¶Ô·½read»Ø·µ»Ø-1£»Èç¹ûÒ»·½Ç¿ÖÆ¹Ø±Õ£¬»áÅÜ³öÒì³£
+		socketChannel.close();					//å…³é—­é€šé“ï¼ŒåŒæ—¶å…³é—­IOï¼Œå³å‘æµè¾“å‡ºstream-end,ç„¶åå¯¹æ–¹readå›è¿”å›-1ï¼›å¦‚æœä¸€æ–¹å¼ºåˆ¶å…³é—­ï¼Œä¼šè·‘å‡ºå¼‚å¸¸
 	}
 
 	public static void main(String[] args) throws IOException {

@@ -41,7 +41,7 @@ public class CheckBoxFrame extends JFrame {
 		setJMenuBar(bar);
 		
 		
-		menu = new JMenu("²Ëµ¥");
+		menu = new JMenu("èœå•");
 		bar.add(menu);
 		
 		//item = new JMenu

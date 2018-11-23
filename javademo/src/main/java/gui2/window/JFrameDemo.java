@@ -97,7 +97,7 @@ public class JFrameDemo extends JFrame {
 		setBounds(DefaultConstant.DisplayWidth / 2 - width / 2, DefaultConstant.DisplayHeight / 2 - height / 2 - 30,
 				width, height);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// È¥µô±ß¿ò
+		// å»æ‰è¾¹æ¡†
 		//setUndecorated(true);
 	}
 
@@ -129,7 +129,7 @@ public class JFrameDemo extends JFrame {
 
 			ImageIcon icon = new ImageIcon("360logo.gif");
 			iconLabel = new JLabel(icon);
-			titleLabel = new JLabel("360°²È«ÎÀÊ¿Áìº½°æ");
+			titleLabel = new JLabel("360å®‰å…¨å«å£«é¢†èˆªç‰ˆ");
 			updateButton = new JButton("0");
 			JPanel titlePanel = new JPanel();
 			titlePanel.setLayout(new FlowLayout());
@@ -165,7 +165,7 @@ public class JFrameDemo extends JFrame {
 			image = ImageIO.read(new File("Frame.jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Frame.jpgÍ¼Æ¬¶ÁÈ¡Ê§°Ü");
+			System.out.println("Frame.jpgå›¾ç‰‡è¯»å–å¤±è´¥");
 			e.printStackTrace();
 			System.exit(1);
 		}

@@ -1,8 +1,8 @@
 package gui1.notice;
 
 public class ThreadNotice {
-/*ÒòÎªRunnableµÄstart·½·¨µÄÖ´ĞĞ²»ÊÇ°´ÕÕ½á¹¹±à³Ì
- * RunnableµÄstart·½·¨¾¡Á¿·Åµ½×îºó£¬
+/*å› ä¸ºRunnableçš„startæ–¹æ³•çš„æ‰§è¡Œä¸æ˜¯æŒ‰ç…§ç»“æ„ç¼–ç¨‹
+ * Runnableçš„startæ–¹æ³•å°½é‡æ”¾åˆ°æœ€åï¼Œ
  * 
  * 
  * 

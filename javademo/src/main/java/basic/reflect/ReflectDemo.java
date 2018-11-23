@@ -1,7 +1,7 @@
 package basic.reflect;
 
 /*
- * ÆäÊµ·´Éä»úÖÆ¾ÍÊÇµ÷ÓÃÁËjvmµÄ½Ó¿Ú¡£
+ * å…¶å®åå°„æœºåˆ¶å°±æ˜¯è°ƒç”¨äº†jvmçš„æ¥å£ã€‚
  */
 public class ReflectDemo {
 	public static void main(String[] args) throws Exception {
@@ -9,18 +9,18 @@ public class ReflectDemo {
 		Class<? extends java.io.Serializable> c = s.getClass();
 		System.out.println(c);
 //		
-//		//Modifier¾ÍÊÇĞŞÊÎ·û£¬Í¨¹ı²é¿´ModifierÀà¿ÉÒÔÖªµÀÏàÓ¦ĞŞÊÎ·û¶ÔÓ¦µÄĞŞÊÎ·ûµÄÎ»
+//		//Modifierå°±æ˜¯ä¿®é¥°ç¬¦ï¼Œé€šè¿‡æŸ¥çœ‹Modifierç±»å¯ä»¥çŸ¥é“ç›¸åº”ä¿®é¥°ç¬¦å¯¹åº”çš„ä¿®é¥°ç¬¦çš„ä½
 //				System.out.println(Modifier.toString(c.getModifiers()));
 //		
-//		//getTypeNameÊÇÊı¾İÀàĞÍµÄ×Ö·û´®£¬µ«1.8ºó³öÏÖµÄ£¬¶øgetName·µ»ØµÄÊÇÊı¾İÀàĞÍ»òÔò×ª»»ºóµÄÃû³Æ
+//		//getTypeNameæ˜¯æ•°æ®ç±»å‹çš„å­—ç¬¦ä¸²ï¼Œä½†1.8åå‡ºç°çš„ï¼Œè€ŒgetNameè¿”å›çš„æ˜¯æ•°æ®ç±»å‹æˆ–åˆ™è½¬æ¢åçš„åç§°
 //		System.out.println(new byte[10][10].getClass().getTypeName());
 //		System.out.println(new byte[10][10].getClass().getName());
-//		//µ«getName¶ÔÆÕÍ¨µÄÀà¾ÍÊÇ·µ»ØÊı¾İÃû³Æ£»
+//		//ä½†getNameå¯¹æ™®é€šçš„ç±»å°±æ˜¯è¿”å›æ•°æ®åç§°ï¼›
 //		System.out.println(c.getName() + "\n" + c.getTypeName());
 //		System.out.println(c.getSimpleName());
 //		System.err.println(c.getPackageName());
 		
-//		//»ñÈ¡public³ÉÔ±±äÁ¿
+//		//è·å–publicæˆå‘˜å˜é‡
 //		Field fields1[] = c.getFields();
 //		for (int i = 0; i < fields1.length; i++) {
 //			System.out.printf("%-30s%-30s%-30s\n",
@@ -31,7 +31,7 @@ public class ReflectDemo {
 //		
 //		System.out.println();
 		
-//		//»ñÈ¡ËùÓĞ³ÉÔ±±äÁ¿
+//		//è·å–æ‰€æœ‰æˆå‘˜å˜é‡
 //		Field fields[] = c.getDeclaredFields();
 //		for (int i = 0; i < fields.length; i++) {
 //			System.out.printf("%-30s%-30s%-30s\n",
@@ -41,17 +41,17 @@ public class ReflectDemo {
 //		}
 		
 		
-//		//¾ÍÊÇËµ»ù±¾ÀàĞÍÒ²ÊÇÓĞclassµÄ£¬µ«Õâ¸öclassÖ»ÊÇÏóÕ÷ÒâÒåµÄ£¬Ö»ÊÇÎªÁË¼æÈİ£¬ÆäÊµÃ»ÓĞÊ²Ã´·½·¨£¬³ÉÔ±±äÁ¿µÄ¡£
+//		//å°±æ˜¯è¯´åŸºæœ¬ç±»å‹ä¹Ÿæ˜¯æœ‰classçš„ï¼Œä½†è¿™ä¸ªclassåªæ˜¯è±¡å¾æ„ä¹‰çš„ï¼Œåªæ˜¯ä¸ºäº†å…¼å®¹ï¼Œå…¶å®æ²¡æœ‰ä»€ä¹ˆæ–¹æ³•ï¼Œæˆå‘˜å˜é‡çš„ã€‚
 //		System.out.println(long.class.field2.length);
 //		System.out.println(long.class.getDeclaredMethods().length);
 //		System.out.println(long.class.getTypeName());
 //		System.out.println(long.class instanceof Object);
 //		System.out.println(long.class.toString());
 		
-//		//»ñÈ¡ÄÚ²¿±äÁ¿µÄÖµ,²¢¸Ä±äÄÚ²¿Öµ£¬µ«finalµÄÊôĞÔµÄ»¹ÊÇÎŞ·¨ĞŞ¸ÄµÄ£¬±ÈÈç
-//		//field[3]¼´serialVersionUID£¬ĞŞ¸ÄÊÇ¾Í»áÅÜ³öÒì³£
+//		//è·å–å†…éƒ¨å˜é‡çš„å€¼,å¹¶æ”¹å˜å†…éƒ¨å€¼ï¼Œä½†finalçš„å±æ€§çš„è¿˜æ˜¯æ— æ³•ä¿®æ”¹çš„ï¼Œæ¯”å¦‚
+//		//field[3]å³serialVersionUIDï¼Œä¿®æ”¹æ˜¯å°±ä¼šè·‘å‡ºå¼‚å¸¸
 //		Field serialVersionUID = fields[2];
-//		serialVersionUID.setAccessible(true);					//Ê¹µÃË½ÓĞ±äÁ¿ÄÜ¹»±»·ÃÎÊºÍĞŞ¸Ä
+//		serialVersionUID.setAccessible(true);					//ä½¿å¾—ç§æœ‰å˜é‡èƒ½å¤Ÿè¢«è®¿é—®å’Œä¿®æ”¹
 //		Object o = serialVersionUID.get(s);
 //		System.out.println(o);
 //		serialVersionUID.set(s, Integer.valueOf(2147483647));
@@ -59,11 +59,11 @@ public class ReflectDemo {
 //		System.out.println(o);
 //		serialVersionUID.setAccessible(false);
 		
-//		//long.class.getTypeName() ·µ»ØµÄ»¹ÊÇlong£¬µ«Í¨¹ı·´Éä»úÖÆ»ñÈ¡µ½long±äÁ¿µÄFieldÔòÆğÀàĞÍ±à³ÌÁËLong
+//		//long.class.getTypeName() è¿”å›çš„è¿˜æ˜¯longï¼Œä½†é€šè¿‡åå°„æœºåˆ¶è·å–åˆ°longå˜é‡çš„Fieldåˆ™èµ·ç±»å‹ç¼–ç¨‹äº†Long
 //		System.out.println(o.getClass().getTypeName());
 
 		
-//		Method methods[] = c.getDeclaredMethods();			//Í¬getFieldsÒ»ÑùgetMethodsµÄ»°£¬¾ÍÖ»ÊÇ·µ»ØpublicµÄ·½·¨
+//		Method methods[] = c.getDeclaredMethods();			//åŒgetFieldsä¸€æ ·getMethodsçš„è¯ï¼Œå°±åªæ˜¯è¿”å›publicçš„æ–¹æ³•
 //		for (int i = 0; i < methods.length; i++) {
 //			if(i!=0)
 //				System.out.println("-----------------------------------------------------------------------"+
@@ -84,7 +84,7 @@ public class ReflectDemo {
 //		}
 
 		
-//		//ÀûÓÃ·´Éäµ÷ÓÃË½ÓĞ·½·¨
+//		//åˆ©ç”¨åå°„è°ƒç”¨ç§æœ‰æ–¹æ³•
 //		Method methods[] = ReflectDemo_assist.class.getDeclaredMethods();
 //		ReflectDemo_assist assist = new ReflectDemo_assist();
 //		System.out.println(methods[0].getName());

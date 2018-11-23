@@ -4,12 +4,12 @@ import java.util.Vector;
 import java.util.Enumeration;
 
 public class DemoSource {     
-    private Vector<DemoListener> repository = new Vector<DemoListener>();//¼àÌı×Ô¼ºµÄ¼àÌıÆ÷¶ÓÁĞ     
+    private Vector<DemoListener> repository = new Vector<DemoListener>();//ç›‘å¬è‡ªå·±çš„ç›‘å¬å™¨é˜Ÿåˆ—     
     public DemoSource(){}     
     public void addDemoListener(DemoListener dl) {     
            repository.addElement(dl);     
     }     
-    public void notifyDemoEvent() {//Í¨ÖªËùÓĞµÄ¼àÌıÆ÷     
+    public void notifyDemoEvent() {//é€šçŸ¥æ‰€æœ‰çš„ç›‘å¬å™¨     
     	Enumeration<DemoListener> enum1 = repository.elements();     
            while(enum1.hasMoreElements()) {     
                    DemoListener dl = (DemoListener)enum1.nextElement();     

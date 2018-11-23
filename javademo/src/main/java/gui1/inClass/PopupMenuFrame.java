@@ -24,14 +24,14 @@ public class PopupMenuFrame extends JFrame {
 		popupMenu = new JPopupMenu();
 		add(popupMenu);
 
-		JMenu shape = new JMenu("ÐÎ×´");
-		JMenu color = new JMenu("ÑÕÉ«");
+		JMenu shape = new JMenu("å½¢çŠ¶");
+		JMenu color = new JMenu("é¢œè‰²");
 		popupMenu.add(shape);
 		popupMenu.add(color);
 
 		/*
-		 * circleButton=new JRadioButtonMenuItem("Ô²"); rectButton=new
-		 * JRadioButtonMenuItem("¾ØÐÎ"); shape.add(circleButton); shape.add(rectButton);
+		 * circleButton=new JRadioButtonMenuItem("åœ†"); rectButton=new
+		 * JRadioButtonMenuItem("çŸ©å½¢"); shape.add(circleButton); shape.add(rectButton);
 		 * 
 		 * ItemHandler itemHandler= new ItemHandler();
 		 * circleButton.addItemListener(itemHandler);

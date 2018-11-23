@@ -3,7 +3,7 @@ package basic.process;
 import java.io.IOException;
 
 /**
- * Æô¶¯½ø³ÌµÄÁ½ÖÖ·½Ê½
+ * å¯åŠ¨è¿›ç¨‹çš„ä¸¤ç§æ–¹å¼
  * 
  * @author BrightSt
  *
@@ -16,10 +16,10 @@ public class ProcessDemo {
 	}
 
 	/**
-	 * ·½·¨1£ºÀûÓÃRuntime
+	 * æ–¹æ³•1ï¼šåˆ©ç”¨Runtime
 	 */
 	public static void startUpNotepad1() {
-		Runtime r = Runtime.getRuntime();// RuntimeÀàÊÇÒ»¸öµ¥Àı
+		Runtime r = Runtime.getRuntime();// Runtimeç±»æ˜¯ä¸€ä¸ªå•ä¾‹
 		try {
 			r.exec("notepad");
 		} catch (IOException e) {
@@ -28,7 +28,7 @@ public class ProcessDemo {
 	}
 
 	/**
-	 * ·½·¨2£ºÀûÓÃ
+	 * æ–¹æ³•2ï¼šåˆ©ç”¨
 	 */
 	public static void startUpNotepad2() {
 		ProcessBuilder pb = new ProcessBuilder("notepad");

@@ -17,7 +17,7 @@ public class BufferDemo {
 //		System.out.println(b.limit());
 //		System.out.println(b.capacity());
 
-		// ²»ÕıÈ·µÄÈ¡Öµ²Ù×÷£¬»áµÃµ½0£¬¶ø²»ÊÇ´æ´¢µÄÊı¾İ
+		// ä¸æ­£ç¡®çš„å–å€¼æ“ä½œï¼Œä¼šå¾—åˆ°0ï¼Œè€Œä¸æ˜¯å­˜å‚¨çš„æ•°æ®
 		// for (char i = 0; i < 256; i++) {
 		// System.out.println(b.position());
 		// System.out.println(b.limit());
@@ -37,17 +37,17 @@ public class BufferDemo {
 			a = b.get();
 			tmp = ((int) (a & (byte) 127)) ;
 			tmp1 = a >>> (7+24) ;
-			System.out.printf("µÚ %d¸öÊı¾İÊÇ£º%d\n", (int)i,tmp+tmp1*128);
+			System.out.printf("ç¬¬ %dä¸ªæ•°æ®æ˜¯ï¼š%d\n", (int)i,tmp+tmp1*128);
 		}
 		b.reset();
 		for (char i = 0; i < 256; i++) {
 			a = b.get();
 			tmp = ((int) (a & (byte) 127)) ;
 			tmp1 = a >>> (7+24) ;
-			System.out.printf("µÚ %d¸öÊı¾İÊÇ£º%d\n", (int)i,tmp+tmp1*128);
+			System.out.printf("ç¬¬ %dä¸ªæ•°æ®æ˜¯ï¼š%d\n", (int)i,tmp+tmp1*128);
 		}
 		
-		//b.rewind()½«Æä×ª»»³ÉĞ´µÄÄ£Ê½
+		//b.rewind()å°†å…¶è½¬æ¢æˆå†™çš„æ¨¡å¼
 //		System.out.println(channel.write(src));
 	}
 }

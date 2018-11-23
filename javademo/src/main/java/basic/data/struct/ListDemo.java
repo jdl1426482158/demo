@@ -11,7 +11,7 @@ import java.util.Set;
 
 /**
  * @author jdl
- * time: 2018�?11�?11�? 下午2:02:58
+ * time: 2018年11月11日 下午2:02:58
  */
 public class ListDemo {
 	public static void main(String[] args) {

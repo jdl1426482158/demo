@@ -34,7 +34,7 @@ public class DrawLineTest extends JPanel {
 			endy=arg0.getY();
 			counter++;
 			repaint();
-			//不管repaint()放在mouseDragged的哪个位置，他总是在最后才执行
+			//涓嶇repaint()鏀惧湪mouseDragged鐨勫摢涓綅缃紝浠栨�绘槸鍦ㄦ渶鍚庢墠鎵ц
 			counter++;
 			
 			midx=endx;

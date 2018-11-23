@@ -12,7 +12,7 @@ public class MyClipboardDemo implements ClipboardOwner{
 	public static void main(String args[]) throws Exception
 	{
 		
-		//ÊµÏÖµÄ¹¦ÄÜÊÇ¼ôÌù°æ£¬Õ³ÌùÒ»´Îºó¸üĞÂ¼ôÌù°æ
+		//å®ç°çš„åŠŸèƒ½æ˜¯å‰ªè´´ç‰ˆï¼Œç²˜è´´ä¸€æ¬¡åæ›´æ–°å‰ªè´´ç‰ˆ
 		Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();
 		MyClipboardDemo owner = new MyClipboardDemo();
 		String address = "https://www.cs.utexas.edu/users/byoung/cs361/lecture"; 

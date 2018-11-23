@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 
  * @author zhangliang
  *
- *         2016Äê4ÔÂ8ÈÕ ÏÂÎç5:48:54
+ *         2016å¹´4æœˆ8æ—¥ ä¸‹åˆ5:48:54
  */
 public class ConTest {
 
@@ -37,12 +37,12 @@ public class ConTest {
 		private void consume() {
 			try {
 				lock.lock();
-				System.out.println("ÎÒÔÚµÈÒ»¸öĞÂĞÅºÅ" + Thread.currentThread().getName());
+				System.out.println("æˆ‘åœ¨ç­‰ä¸€ä¸ªæ–°ä¿¡å·" + Thread.currentThread().getName());
 				condition.await();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} finally {
-				System.out.println("ÄÃµ½Ò»¸öĞÅºÅ" + Thread.currentThread().getName());
+				System.out.println("æ‹¿åˆ°ä¸€ä¸ªä¿¡å·" + Thread.currentThread().getName());
 				lock.unlock();
 			}
 		}
@@ -62,9 +62,9 @@ public class ConTest {
 		private void produce() {
 			try {
 				lock.lock();
-				System.out.println("ÎÒÄÃµ½Ëø" + Thread.currentThread().getName());
+				System.out.println("æˆ‘æ‹¿åˆ°é”" + Thread.currentThread().getName());
 				condition.signalAll();
-				System.out.println("ÎÒ·¢³öÁËÒ»¸öĞÅºÅ£º" + Thread.currentThread().getName());
+				System.out.println("æˆ‘å‘å‡ºäº†ä¸€ä¸ªä¿¡å·ï¼š" + Thread.currentThread().getName());
 			} finally {
 				lock.unlock();
 			}

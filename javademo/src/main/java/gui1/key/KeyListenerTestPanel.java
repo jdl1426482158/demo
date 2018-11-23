@@ -17,7 +17,7 @@ public class KeyListenerTestPanel extends JPanel implements KeyListener {
 	private static final long serialVersionUID = 7282579727602323973L;
 	JLabel Jb;
 	public KeyListenerTestPanel(){
-		Jb=new JLabel("²âÊÔ");
+		Jb=new JLabel("æµ‹è¯•");
 		this.add(Jb);	
 	}
 
@@ -25,24 +25,24 @@ public class KeyListenerTestPanel extends JPanel implements KeyListener {
 		// TODO Auto-generated method stub
 		int keyCode = e.getKeyCode();
 		
-        switch (keyCode) {//ÅĞ¶Ï¼üÅÌÖµ
+        switch (keyCode) {//åˆ¤æ–­é”®ç›˜å€¼
 		
 		case 37:
-			Jb.setText("×ó");
-			System.out.println("×ó");
-			break;// ×ó
+			Jb.setText("å·¦");
+			System.out.println("å·¦");
+			break;// å·¦
 		case 38:
-			Jb.setText("ÉÏ");
-			System.out.println("ÉÏ");
-			break;// ÉÏ
+			Jb.setText("ä¸Š");
+			System.out.println("ä¸Š");
+			break;// ä¸Š
 		case 39:
-			Jb.setText("ÓÒ");
-			System.out.println("ÓÒ");
-			break;// ÓÒ
+			Jb.setText("å³");
+			System.out.println("å³");
+			break;// å³
 		case 40:
-			Jb.setText("ÏÂ");
-			System.out.println("ÏÂ");
-			break;// ÏÂ
+			Jb.setText("ä¸‹");
+			System.out.println("ä¸‹");
+			break;// ä¸‹
 		
 		}
 	}
@@ -74,7 +74,7 @@ public class KeyListenerTestPanel extends JPanel implements KeyListener {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
-				jf.requestFocus();//»ñÈ¡½¹µã£¬²ÅÄÜÏìÓ¦¼üÅÌÊÂ¼ş
+				jf.requestFocus();//è·å–ç„¦ç‚¹ï¼Œæ‰èƒ½å“åº”é”®ç›˜äº‹ä»¶
 			}
 
 			@Override

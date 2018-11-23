@@ -10,10 +10,10 @@ public class ClientDatagramChannelDemo {
 	DatagramChannel channel;
 
 	public ClientDatagramChannelDemo() throws IOException {
-		channel = DatagramChannel.open(); 										// ´´½¨Í¨µÀ
-		channel.configureBlocking(false); 										// ÉèÖÃ·Ç×èÈû
+		channel = DatagramChannel.open(); 										// åˆ›å»ºé€šé“
+		channel.configureBlocking(false); 										// è®¾ç½®éé˜»å¡
 
-//		 channel.connect(new InetSocketAddress("localhost", 9999));			//¼Ù×°ÎªÁ¬½Ó£¬ÆäÊµÖ»ÊÇÌáÇ°ÉèÖÃÁËµç±¨·¢ËÍÄ¿±êµØÖ·
+//		 channel.connect(new InetSocketAddress("localhost", 9999));			//å‡è£…ä¸ºè¿æ¥ï¼Œå…¶å®åªæ˜¯æå‰è®¾ç½®äº†ç”µæŠ¥å‘é€ç›®æ ‡åœ°å€
 
 	}
 
@@ -22,8 +22,8 @@ public class ClientDatagramChannelDemo {
 
 		buffer.put(msg.getBytes());
 		buffer.flip();
-		channel.send(buffer, new InetSocketAddress("localhost", 9999)); 		// ·¢ËÍÊı¾İ
-//		channel.write(buffer);													//¶ÔÓ¦ÉÏÃæ×¢ÊÍµôµÄ´úÂë£¬¼Ù×°Á¬½Ó·¢ËÍÊı¾İ£¬µ«Ã»ÓĞ±£ÕÏ¶Ô·½ÊÇ·ñÊÕµ½ÏûÏ¢.
+		channel.send(buffer, new InetSocketAddress("localhost", 9999)); 		// å‘é€æ•°æ®
+//		channel.write(buffer);													//å¯¹åº”ä¸Šé¢æ³¨é‡Šæ‰çš„ä»£ç ï¼Œå‡è£…è¿æ¥å‘é€æ•°æ®ï¼Œä½†æ²¡æœ‰ä¿éšœå¯¹æ–¹æ˜¯å¦æ”¶åˆ°æ¶ˆæ¯.
 
 	}
 

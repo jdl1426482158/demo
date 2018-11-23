@@ -3,7 +3,7 @@ package multithread.a_atest;
 public class Counter {
     public volatile static int count = 0;
     public static void inc() {
-        //ÕâÀïÑÓ³Ù1ºÁÃë£¬Ê¹µÃ½á¹ûÃ÷ÏÔ
+        //è¿™é‡Œå»¶è¿Ÿ1æ¯«ç§’ï¼Œä½¿å¾—ç»“æœæ˜æ˜¾
         try {
             Thread.sleep(1);
         } catch (InterruptedException e) {
@@ -11,7 +11,7 @@ public class Counter {
         count++;
     }
     public static void main(String[] args) throws InterruptedException {
-        //Í¬Ê±Æô¶¯1000¸öÏß³Ì£¬È¥½øĞĞi++¼ÆËã£¬¿´¿´Êµ¼Ê½á¹û
+        //åŒæ—¶å¯åŠ¨1000ä¸ªçº¿ç¨‹ï¼Œå»è¿›è¡Œi++è®¡ç®—ï¼Œçœ‹çœ‹å®é™…ç»“æœ
         for (int i = 0; i < 1000; i++) {
             new Thread(new Runnable() {
                 @Override
@@ -20,8 +20,8 @@ public class Counter {
                 }
             }).start();
         }
-        //ÕâÀïÃ¿´ÎÔËĞĞµÄÖµ¶¼ÓĞ¿ÉÄÜ²»Í¬,¿ÉÄÜ²»Îª1000
+        //è¿™é‡Œæ¯æ¬¡è¿è¡Œçš„å€¼éƒ½æœ‰å¯èƒ½ä¸åŒ,å¯èƒ½ä¸ä¸º1000
         Thread.sleep(20000);
-        System.out.println("ÔËĞĞ½á¹û:Counter.count=" + Counter.count);
+        System.out.println("è¿è¡Œç»“æœ:Counter.count=" + Counter.count);
     }
 }

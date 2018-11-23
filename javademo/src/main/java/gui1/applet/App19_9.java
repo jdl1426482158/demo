@@ -13,40 +13,40 @@ import java.awt.event.MouseMotionListener;
 	 * 
 	 */
 	private static final long serialVersionUID = -6715156400065793057L;
-	Image img;   //ÉùÃ÷ImageÀàÐÍµÄ±äÁ¿img                        	
+	Image img;   //å£°æ˜ŽImageç±»åž‹çš„å˜é‡img                        	
      int x=70,y=60,posX=70,posY=60,dx,dy;
-     //init()·½·¨³õÊ¼»¯applet
+     //init()æ–¹æ³•åˆå§‹åŒ–applet
      public void init()
      {
         img=getImage(getCodeBase(),"mouse.jpg");                 
-        // ¼ÓÔØÓ°Ïñ      	 addMouseListener(this);
+        // åŠ è½½å½±åƒ      	 addMouseListener(this);
         addMouseMotionListener(this); 
       }
 
      public void mousePressed(MouseEvent e)
      {
-        dx=e.getX()-posX; // È¡µÃ°´ÏÂµãÓë»ù×¼µãx·½ÏòµÄ¾àÀë
-        dy=e.getY()-posY; // È¡µÃ°´ÏÂµãÓë»ù×¼µãy·½ÏòµÄ¾àÀë
+        dx=e.getX()-posX; // å–å¾—æŒ‰ä¸‹ç‚¹ä¸ŽåŸºå‡†ç‚¹xæ–¹å‘çš„è·ç¦»
+        dy=e.getY()-posY; // å–å¾—æŒ‰ä¸‹ç‚¹ä¸ŽåŸºå‡†ç‚¹yæ–¹å‘çš„è·ç¦»
       } 
      public void mouseDragged(MouseEvent e)
      {
-       x=e.getX()-dx;    // È¡µÃÍÏÒ·Ê±»ù×¼µãµÄx×ø±ê
-       y=e.getY()-dy;    // È¡µÃÍÏÒ·Ê±»ù×¼µãµÄy×ø±ê
+       x=e.getX()-dx;    // å–å¾—æ‹–æ›³æ—¶åŸºå‡†ç‚¹çš„xåæ ‡
+       y=e.getY()-dy;    // å–å¾—æ‹–æ›³æ—¶åŸºå‡†ç‚¹çš„yåæ ‡
        if(dx>0 && dx<120 && dy>0 && dy<60) 
-                         // Èç¹ûÖ¸ÕëÂäÔÚÍ¼ÐÎÉÏ·½
+                         // å¦‚æžœæŒ‡é’ˆè½åœ¨å›¾å½¢ä¸Šæ–¹
         {
               Graphics g=getGraphics();
-              update(g); // Çå¿Õ»­ÃæÎª±³¾°ÑÕÉ«£¬ÔÙµ÷ÓÃpaint()  
+              update(g); // æ¸…ç©ºç”»é¢ä¸ºèƒŒæ™¯é¢œè‰²ï¼Œå†è°ƒç”¨paint()  
              
            }
         }
-     //paint()·½·¨´¦Àí
+     //paint()æ–¹æ³•å¤„ç†
      public void paint(Graphics g)
      {
        g.drawImage(img,x,y,120,60,this);  
-                   // ½«img»­ÔÚappletÉÏ
-       posX=x;     // ¸üÐÂ»ù×¼µãµÄx×ø±ê
-       posY=y;     // ¸üÐÂ»ù×¼µãµÄy×ø±ê
+                   // å°†imgç”»åœ¨appletä¸Š
+       posX=x;     // æ›´æ–°åŸºå‡†ç‚¹çš„xåæ ‡
+       posY=y;     // æ›´æ–°åŸºå‡†ç‚¹çš„yåæ ‡
      }
 
      public void mouseMoved(MouseEvent e){};

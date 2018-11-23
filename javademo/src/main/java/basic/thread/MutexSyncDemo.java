@@ -15,7 +15,7 @@ public class MutexSyncDemo implements Runnable {
 		while (true) {
 			try {
 				Thread.sleep(100);
-				//Sync.SyncTest_No(name); //»á³öÏÖa!=bµÄ½á¹û
+				//Sync.SyncTest_No(name); //ä¼šå‡ºç°a!=bçš„ç»“æœ
 				MutexSync.SyncTest_ReentrantLoc(name);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -26,7 +26,7 @@ public class MutexSyncDemo implements Runnable {
 		}
 	}
 	
-/*	Õâ¸öÊÇÍ¬±»×¢ÊÍµôµÄmainº¯ÊıÒ»Æğ²âÊÔµÄ
+/*	è¿™ä¸ªæ˜¯åŒè¢«æ³¨é‡Šæ‰çš„mainå‡½æ•°ä¸€èµ·æµ‹è¯•çš„
  private static class ThreadDemoC_Copy implements Runnable {
 		private String name;
 
@@ -39,7 +39,7 @@ public class MutexSyncDemo implements Runnable {
 			while (true) {
 				try {
 					Thread.sleep(100);
-					// Sync.SyncTest_No(name); //»á³öÏÖa!=µÄ½á¹û
+					// Sync.SyncTest_No(name); //ä¼šå‡ºç°a!=çš„ç»“æœ
 					Sync.SyncTest_Sync3(name);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -50,8 +50,8 @@ public class MutexSyncDemo implements Runnable {
 			}
 		}
 	}
-//	Sync.SyncTest_Sync1(name)ºÍSync.SyncTest_Sync3(name)»¹ÊÇÄÜÍ¬²½µÄ
-//	Sync.SyncTest_Sync1(name)ºÍSync.SyncTest_Sync2(name)¾Í²»ÄÜÍ¬²½µÄ
+//	Sync.SyncTest_Sync1(name)å’ŒSync.SyncTest_Sync3(name)è¿˜æ˜¯èƒ½åŒæ­¥çš„
+//	Sync.SyncTest_Sync1(name)å’ŒSync.SyncTest_Sync2(name)å°±ä¸èƒ½åŒæ­¥çš„
 	public static void main(String argv[]) {
 		ThreadDemoC a = new ThreadDemoC("A");
 		ThreadDemoC_Copy c = new ThreadDemoC_Copy("C");

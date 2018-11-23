@@ -5,68 +5,68 @@ import java.awt.event.*;
 import java.awt.datatransfer.*;
 import javax.swing.*;
  
-//¼ôÌù°åÑİÊ¾
+//å‰ªè´´æ¿æ¼”ç¤º
  
 public class ClipboardDemo extends JFrame implements ClipboardOwner{
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = -5212246498817175421L;
-	Clipboard clipboard;  //¼ôÌù°å
-    JTextArea jtaCopyTo=new JTextArea(5,10); //ÓÃÓÚ¿½±´µÄÎÄ±¾¿ò
-    JTextArea jtaPaste=new JTextArea(5,10); //ÓÃÓÚÕ³ÌùµÄÎÄ±¾¿ò
+	Clipboard clipboard;  //å‰ªè´´æ¿
+    JTextArea jtaCopyTo=new JTextArea(5,10); //ç”¨äºæ‹·è´çš„æ–‡æœ¬æ¡†
+    JTextArea jtaPaste=new JTextArea(5,10); //ç”¨äºç²˜è´´çš„æ–‡æœ¬æ¡†
  
     public ClipboardDemo(){
-        super("Ê¹ÓÃ¼ôÌù°åµÄ¸´ÖÆ/Õ³Ìù³ÌĞò"); //µ÷ÓÃ¸¸Àà¹¹Ôìº¯Êı
+        super("ä½¿ç”¨å‰ªè´´æ¿çš„å¤åˆ¶/ç²˜è´´ç¨‹åº"); //è°ƒç”¨çˆ¶ç±»æ„é€ å‡½æ•°
          
-        clipboard=Toolkit.getDefaultToolkit().getSystemClipboard(); //»ñµÃÏµÍ³¼ôÌù°å
+        clipboard=Toolkit.getDefaultToolkit().getSystemClipboard(); //è·å¾—ç³»ç»Ÿå‰ªè´´æ¿
  
-        JButton btCopy=new JButton("¿½±´"); //¿½±´°´Å¥
-        JButton btPaste=new JButton("Õ³Ìù"); //Õ³Ìù°´Å¥
-        jtaCopyTo.setLineWrap(true); //ÉèÖÃ»»ĞĞ
+        JButton btCopy=new JButton("æ‹·è´"); //æ‹·è´æŒ‰é’®
+        JButton btPaste=new JButton("ç²˜è´´"); //ç²˜è´´æŒ‰é’®
+        jtaCopyTo.setLineWrap(true); //è®¾ç½®æ¢è¡Œ
         jtaPaste.setLineWrap(true);
-        jtaCopyTo.setBorder(BorderFactory.createTitledBorder("¸´ÖÆµ½ÏµÍ³¼ôÇĞ°å")); //ÉèÖÃ±ß½ç
-        jtaPaste.setBorder(BorderFactory.createTitledBorder("´ÓÏµÍ³¼ôÇĞ°åÕ³Ìù"));
+        jtaCopyTo.setBorder(BorderFactory.createTitledBorder("å¤åˆ¶åˆ°ç³»ç»Ÿå‰ªåˆ‡æ¿")); //è®¾ç½®è¾¹ç•Œ
+        jtaPaste.setBorder(BorderFactory.createTitledBorder("ä»ç³»ç»Ÿå‰ªåˆ‡æ¿ç²˜è´´"));
  
-        Container container=getContentPane(); //µÃµ½ÈİÆ÷
-        JToolBar toolBar=new JToolBar(); //ÊµÀı»¯¹¤¾ßÀ¸
-        toolBar.add(btCopy); //Ôö¼Ó¹¤¾ßÀ¸°´Å¥
+        Container container=getContentPane(); //å¾—åˆ°å®¹å™¨
+        JToolBar toolBar=new JToolBar(); //å®ä¾‹åŒ–å·¥å…·æ 
+        toolBar.add(btCopy); //å¢åŠ å·¥å…·æ æŒ‰é’®
         toolBar.add(btPaste);  
-        btCopy.addActionListener(new CopyListener()); //°´Å¥ÊÂ¼ş´¦Àí
+        btCopy.addActionListener(new CopyListener()); //æŒ‰é’®äº‹ä»¶å¤„ç†
         btPaste.addActionListener(new PasteListener());  
-        Box box=new Box(BoxLayout.X_AXIS); //ÊµÀı»¯Box
-        box.add(jtaCopyTo); //Ôö¼ÓÎÄ±¾¿òµ½BoxÉÏ
+        Box box=new Box(BoxLayout.X_AXIS); //å®ä¾‹åŒ–Box
+        box.add(jtaCopyTo); //å¢åŠ æ–‡æœ¬æ¡†åˆ°Boxä¸Š
         box.add(jtaPaste);  
-        container.add(toolBar,BorderLayout.NORTH); //Ôö¼Ó¹¤¾ßÀ¸µ½ÈİÆ÷
-        container.add(box,BorderLayout.CENTER); //Ôö¼ÓBoxµ½ÈİÆ÷
+        container.add(toolBar,BorderLayout.NORTH); //å¢åŠ å·¥å…·æ åˆ°å®¹å™¨
+        container.add(box,BorderLayout.CENTER); //å¢åŠ Boxåˆ°å®¹å™¨
  
-        setSize(320,180); //ÉèÖÃ´°¿Ú³ß´ç
-        setVisible(true); //ÉèÖÃ´°¿ÚÎª¿ÉÊÓ
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //¹Ø±Õ´°¿ÚÊ±ÍË³ö³ÌĞò
+        setSize(320,180); //è®¾ç½®çª—å£å°ºå¯¸
+        setVisible(true); //è®¾ç½®çª—å£ä¸ºå¯è§†
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //å…³é—­çª—å£æ—¶é€€å‡ºç¨‹åº
     }
  
-    class CopyListener implements ActionListener { //¿½±´Êı¾İ´¦Àí
+    class CopyListener implements ActionListener { //æ‹·è´æ•°æ®å¤„ç†
         public void actionPerformed(ActionEvent event) {
-            StringSelection contents=new StringSelection(jtaCopyTo.getText()); //ÓÃ¿½±´ÎÄ±¾¿òÎÄ±¾ÊµÀı»¯StringSelection¶ÔÏó
-            clipboard.setContents(contents, ClipboardDemo.this); //ÉèÖÃÏµÍ³¼ôÌù°åÄÚÈİ
+            StringSelection contents=new StringSelection(jtaCopyTo.getText()); //ç”¨æ‹·è´æ–‡æœ¬æ¡†æ–‡æœ¬å®ä¾‹åŒ–StringSelectionå¯¹è±¡
+            clipboard.setContents(contents, ClipboardDemo.this); //è®¾ç½®ç³»ç»Ÿå‰ªè´´æ¿å†…å®¹
         }
     }
  
-    class PasteListener implements ActionListener { //Õ³ÌùÊı¾İ´¦Àí
+    class PasteListener implements ActionListener { //ç²˜è´´æ•°æ®å¤„ç†
         public void actionPerformed(ActionEvent event) {
-            Transferable contents=clipboard.getContents(this); //µÃµ½¼ôÌù°åÄÚÈİ
-            if(contents!=null && contents.isDataFlavorSupported(DataFlavor.stringFlavor)) { //ÅĞ¶ÏÄÚÈİÊÇ·ñÎª¿Õ,ÊÇ·ñÎª×Ö·û´®
+            Transferable contents=clipboard.getContents(this); //å¾—åˆ°å‰ªè´´æ¿å†…å®¹
+            if(contents!=null && contents.isDataFlavorSupported(DataFlavor.stringFlavor)) { //åˆ¤æ–­å†…å®¹æ˜¯å¦ä¸ºç©º,æ˜¯å¦ä¸ºå­—ç¬¦ä¸²
                 try{
-                    String string= (String) contents.getTransferData(DataFlavor.stringFlavor); //×ª»»ÄÚÈİµ½×Ö·û´®
-                    jtaPaste.append(string); //²åÈë×Ö·û´®µ½Õ³ÌùÎÄ±¾¿ò
+                    String string= (String) contents.getTransferData(DataFlavor.stringFlavor); //è½¬æ¢å†…å®¹åˆ°å­—ç¬¦ä¸²
+                    jtaPaste.append(string); //æ’å…¥å­—ç¬¦ä¸²åˆ°ç²˜è´´æ–‡æœ¬æ¡†
                 }catch (Exception ex){
-                    ex.printStackTrace(); //´íÎó´¦Àí
+                    ex.printStackTrace(); //é”™è¯¯å¤„ç†
                 }
             }
         }
     }
  
-    public void lostOwnership(Clipboard clip,Transferable transferable) { //ÊµÏÖClipboardOwner½Ó¿ÚÖĞµÄ·½·¨
+    public void lostOwnership(Clipboard clip,Transferable transferable) { //å®ç°ClipboardOwneræ¥å£ä¸­çš„æ–¹æ³•
     }
  
     public static void main(String[] args){

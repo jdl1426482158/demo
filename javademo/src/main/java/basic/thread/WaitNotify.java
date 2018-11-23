@@ -1,16 +1,16 @@
 package basic.thread;
 
 /*
- * Ïß³ÌxÔÚa.waitÊ¹ÓÃÇ°±ØÐë»ñµÃaµÄËø£¬
- * È»ºóÊÍ·ÅaµÄËø½øÈëa¹ØÁªµÄµÈ´ý³Ø£¬
- * Ö®ºó±ØÐëÔÙÆäËûÏß³ÌÀïÃæÔÚ»ñµÃaµÄËøºóµ÷ÓÃa.notify()À´»½ÐÑÏß³Ì£¬
- * Ê¹Æä½øÈëËø³ØµÈ´ý»ñÈ¡ËøÔÙ¾ºÕùËø
+ * çº¿ç¨‹xåœ¨a.waitä½¿ç”¨å‰å¿…é¡»èŽ·å¾—açš„é”ï¼Œ
+ * ç„¶åŽé‡Šæ”¾açš„é”è¿›å…¥aå…³è”çš„ç­‰å¾…æ± ï¼Œ
+ * ä¹‹åŽå¿…é¡»å†å…¶ä»–çº¿ç¨‹é‡Œé¢åœ¨èŽ·å¾—açš„é”åŽè°ƒç”¨a.notify()æ¥å”¤é†’çº¿ç¨‹ï¼Œ
+ * ä½¿å…¶è¿›å…¥é”æ± ç­‰å¾…èŽ·å–é”å†ç«žäº‰é”
  * 
- * ×÷ÓÃ£º
- * ±¾À´Á½¸öÓÃÍ¬ÑùËøµÄ¿éÖ»ÄÜÒ»Ç°Ò»ºóÖ´ÐÐ£¬
- * ÓÃÁËwaitºÍnotifyºóÏàµ±ÓÚ£¬°ÑnotifyÄÄÀïµÄÍ¬²½¿éÇ¶Èëµ½waitÎ»ÖÃ´¦Ö´ÐÐ¡£
+ * ä½œç”¨ï¼š
+ * æœ¬æ¥ä¸¤ä¸ªç”¨åŒæ ·é”çš„å—åªèƒ½ä¸€å‰ä¸€åŽæ‰§è¡Œï¼Œ
+ * ç”¨äº†waitå’ŒnotifyåŽç›¸å½“äºŽï¼ŒæŠŠnotifyå“ªé‡Œçš„åŒæ­¥å—åµŒå…¥åˆ°waitä½ç½®å¤„æ‰§è¡Œã€‚
  * 
- * ReentrantLockÖÐÓÃcon = newConditionÀ´»ñÈ¡ÖØÈëËø£¬con.awaitºÍcon.signalÓÐwaitºÍnotifyÏàËÆµÄ×÷ÓÃ
+ * ReentrantLockä¸­ç”¨con = newConditionæ¥èŽ·å–é‡å…¥é”ï¼Œcon.awaitå’Œcon.signalæœ‰waitå’Œnotifyç›¸ä¼¼çš„ä½œç”¨
  */
 
 

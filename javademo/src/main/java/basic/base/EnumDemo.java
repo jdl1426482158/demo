@@ -5,8 +5,8 @@ public class EnumDemo {
 		// EnumExample e = EnumExample.StudentA;
 		// Class<?> c = e.getClass();
 		// System.out.println(c.getName());
-		// System.out.println("enumÊÇÀàÂğ" + e instanceof Object);//ÎªÃ«°¡°Ñ¼ÓºÅÇ°Ãæ²¿·Ö¸øºÃÏñÅªÃ»ÁË°¡
-		// System.out.println("enumÊÇ¼Ì³ĞÁËjava.lange.Enum ÁË" + String.valueOf(e instanceof
+		// System.out.println("enumæ˜¯ç±»å—" + e instanceof Object);//ä¸ºæ¯›å•ŠæŠŠåŠ å·å‰é¢éƒ¨åˆ†ç»™å¥½åƒå¼„æ²¡äº†å•Š
+		// System.out.println("enumæ˜¯ç»§æ‰¿äº†java.lange.Enum äº†" + String.valueOf(e instanceof
 		// Enum));
 		// System.out.println(EnumExample.StudentB.getName());
 		// System.out.println(EnumExample.StudentA.name());

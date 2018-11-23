@@ -1,7 +1,7 @@
 package basic.base;
 
 public class PrivateClass {
-//privateÖ»ÄÜĞŞÊÎÄÚ²¿Àà£¬²»ÄÜĞŞÊÎÍâ²¿Àà,privateÀàÖ»ÄÜ±»ÄÚ²¿·ÃÎÊ
+//privateåªèƒ½ä¿®é¥°å†…éƒ¨ç±»ï¼Œä¸èƒ½ä¿®é¥°å¤–éƒ¨ç±»,privateç±»åªèƒ½è¢«å†…éƒ¨è®¿é—®
 	private static class Fruit{
 		private String name;
 		private int weight;

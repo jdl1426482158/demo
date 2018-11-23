@@ -38,10 +38,10 @@ public class JFrameDemo extends JFrame {
 		// setBounds(DefaultConstant.DisplayWidth / 2 - width / 2,
 		// DefaultConstant.DisplayHeight / 2 - height / 2 - 30, width,
 		// height);
-		setSize(width, height);//ÉÏÊöµÄ¼ò»¯°æ
+		setSize(width, height);//ä¸Šè¿°çš„ç®€åŒ–ç‰ˆ
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// È¥µô±ß¿ò
+		// å»æ‰è¾¹æ¡†
 		setUndecorated(true);
 	}
 
@@ -81,7 +81,7 @@ public class JFrameDemo extends JFrame {
 
 			ImageIcon icon = new ImageIcon("360logo.gif");
 			iconLabel = new JLabel(icon);
-			titleLabel = new JLabel(" 360°²È«ÎÀÊ¿Áìº½°æ ");
+			titleLabel = new JLabel(" 360å®‰å…¨å«å£«é¢†èˆªç‰ˆ ");
 			titleLabel.setForeground(Color.WHITE);
 			updateButton = new JButton("0");
 			updateButton.setForeground(Color.WHITE);
@@ -196,7 +196,7 @@ public class JFrameDemo extends JFrame {
 
 		public FunctionPanel() {
 			
-			RepairPanel p = new RepairPanel("ĞŞ¸´", "Thunder.png");
+			RepairPanel p = new RepairPanel("ä¿®å¤", "Thunder.png");
 			JPanel leftPanel = new JPanel();
 			leftPanel.add(p);
 			leftPanel.setOpaque(false);

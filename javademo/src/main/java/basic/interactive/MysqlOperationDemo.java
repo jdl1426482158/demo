@@ -10,29 +10,29 @@ import java.sql.Statement;
 public class MysqlOperationDemo {
 
 	/**
-	 * Èç¹ûÄÜ³É¹¦´ò¿ª£¬·µ»ØTool Èç¹û´ò¿ªÊ§°Ü,·µ»Ønull
+	 * å¦‚æœèƒ½æˆåŠŸæ‰“å¼€ï¼Œè¿”å›Tool å¦‚æœæ‰“å¼€å¤±è´¥,è¿”å›null
 	 */
 	private Connection conn;
 
 	public MysqlOperationDemo(String IPAddress, String databaseName, String username, String password)
 			throws ClassNotFoundException, SQLException {
 //		Process p = Runtime.getRuntime().exec("sc query mysql57");
-		//¿ÉÒÔÓÃÀ´³¢ÊÔ¿ªÆô·şÎñ
-		// ĞÂ°æ¼ÓÔØÕâ¸öÇı¶¯³ÌĞò
+		//å¯ä»¥ç”¨æ¥å°è¯•å¼€å¯æœåŠ¡
+		// æ–°ç‰ˆåŠ è½½è¿™ä¸ªé©±åŠ¨ç¨‹åº
 		Class.forName("com.mysql.jdbc.Driver");
-		// Á¬½ÓÊı¾İ¿â
+		// è¿æ¥æ•°æ®åº“
 		conn = DriverManager.getConnection("jdbc:mysql://" + IPAddress + ":3306/" + databaseName, username, password);
 	}
 
 	/**
-	 * ÕâÊÇ²âÊÔÓÃµÄ¹¹Ôì·½·¨
+	 * è¿™æ˜¯æµ‹è¯•ç”¨çš„æ„é€ æ–¹æ³•
 	 */
 	public MysqlOperationDemo() throws ClassNotFoundException, SQLException {
 		this("localhost", "test", "root", "root");
 	}
 
 	/**
-	 * read²Ù×÷ÓÃquery
+	 * readæ“ä½œç”¨query
 	 */
 	public String executeQuery(String queryStatement) {
 		try {
@@ -64,7 +64,7 @@ public class MysqlOperationDemo {
 	}
 
 	/**
-	 * write²Ù×÷ÓÃquery
+	 * writeæ“ä½œç”¨query
 	 */
 	public int executeUpdate(String updateStatement) {
 		try {

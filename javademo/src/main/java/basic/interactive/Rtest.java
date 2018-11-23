@@ -14,10 +14,10 @@ import org.rosuda.JRI.RMainLoopCallbacks;
 
 
 /*
- * ĞèÒªÅäÖÃ»·¾³±äÁ¿
- * %R_HOME%/bin/x64ºÍ%R_HOME%/library/rJava/jri/x64
- * ×¢ÒâÈç¹ûÊÇ32µÄ»°ÔòĞèÒªÈ¥µôx64»òÕßÊÇ°Ñx64¸Ä³Éi386
- * Õâ¸öÀı×Ó¾ÍÊÇÔÙrJavaÖĞµÄ
+ * éœ€è¦é…ç½®ç¯å¢ƒå˜é‡
+ * %R_HOME%/bin/x64å’Œ%R_HOME%/library/rJava/jri/x64
+ * æ³¨æ„å¦‚æœæ˜¯32çš„è¯åˆ™éœ€è¦å»æ‰x64æˆ–è€…æ˜¯æŠŠx64æ”¹æˆi386
+ * è¿™ä¸ªä¾‹å­å°±æ˜¯å†rJavaä¸­çš„
  */
 class TextConsole implements RMainLoopCallbacks
 {
@@ -241,7 +241,7 @@ public class Rtest {
 	    System.out.println("Now the console is yours ... have fun");
 	    re.startMainLoop();
 	} 
-//	//ºÜÃÔÎªÊ²Ã´ÓÃtrue£¬Ó¦¸ÃÊÇĞèÒª±»ĞŞ¸ÄµÄµØ·½°´¾ßÌåĞèÇó
+//	//å¾ˆè¿·ä¸ºä»€ä¹ˆç”¨trueï¼Œåº”è¯¥æ˜¯éœ€è¦è¢«ä¿®æ”¹çš„åœ°æ–¹æŒ‰å…·ä½“éœ€æ±‚
 //	else {
 //	    re.end();
 //	    System.out.println("end");

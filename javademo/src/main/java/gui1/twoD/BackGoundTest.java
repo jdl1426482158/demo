@@ -23,7 +23,7 @@ public class BackGoundTest extends JFrame {
 
 		panel = new BackGoundPanel("Lighthouse.jpg");
 
-		panel.setLayout(null);// ÎªÁËÊ¹ÓÃ°´Å¥µÄ¶¨Î»
+		panel.setLayout(null);// ä¸ºäº†ä½¿ç”¨æŒ‰é’®çš„å®šä½
 		JButton button = new JButton("OK");
 		button.setSize(100, 20);
 		button.setLocation(100, 50);
@@ -45,23 +45,23 @@ public class BackGoundTest extends JFrame {
 
 	}
 
-//×Ô¶¨ÒåÒ»¸ö±³¾°Ãæ°åµÄÀà	
+//è‡ªå®šä¹‰ä¸€ä¸ªèƒŒæ™¯é¢æ¿çš„ç±»	
 	class BackGoundPanel extends JPanel {
 		/**
 		 * 
 		 */
 		private static final long serialVersionUID = 1L;
-		Image im;//±³¾°Í¼Æ¬
+		Image im;//èƒŒæ™¯å›¾ç‰‡
 
-		//ÖØÔØ¹¹Ôì·½·¨
+		//é‡è½½æ„é€ æ–¹æ³•
 		public BackGoundPanel(String IMname) throws FileNotFoundException, IOException {
 			File file=new File(IMname);
 			FileImageInputStream input=new FileImageInputStream(file);
 			input.close();////////////////////////////////////////////////////////////////
 			//im = Toolkit.getDefaultToolkit().getImage(
-				//	getClass().getResource(IMname));//ÔÚ´´½¨Ò»¸öĞÂµÄ±³¾°Ãæ°åÊÇ´«ÈëµÄÍ¼Æ¬
+				//	getClass().getResource(IMname));//åœ¨åˆ›å»ºä¸€ä¸ªæ–°çš„èƒŒæ™¯é¢æ¿æ˜¯ä¼ å…¥çš„å›¾ç‰‡
 		}
-		//ÖØĞ´paintcomponent·½·¨
+		//é‡å†™paintcomponentæ–¹æ³•
 		public void paintComponent(Graphics g) {
 			g.drawRect(10, 10, 10, 10);
 			g.drawImage(im, 0, 0, null);
@@ -69,13 +69,13 @@ public class BackGoundTest extends JFrame {
 		
 	}
 
-	//Ö÷·½·¨
+	//ä¸»æ–¹æ³•
 	public static void main(String arg[]) throws FileNotFoundException, IOException {
 		BackGoundTest sf = new BackGoundTest();
 		sf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		sf.setSize(1000, 700);
 		
-		//sf.pack();//Ê¹´°¿Ú°´ÆäÊ×Ñ¡´óĞ¡²¼¾Ö×é¼ş£¨²»Çå³ş¶Ô±³¾°Í¼ÒâÒåºÎÔÚ£¬µ«Ò»¶¨ÒªÓĞ£©
+		//sf.pack();//ä½¿çª—å£æŒ‰å…¶é¦–é€‰å¤§å°å¸ƒå±€ç»„ä»¶ï¼ˆä¸æ¸…æ¥šå¯¹èƒŒæ™¯å›¾æ„ä¹‰ä½•åœ¨ï¼Œä½†ä¸€å®šè¦æœ‰ï¼‰
 		sf.setVisible(true);
 	}
 }

@@ -5,15 +5,15 @@ public class TestDemo {
 	   public TestDemo(){     
 	      try{     
 	         ds = new DemoSource();     
-	         //½«¼àÌıÆ÷ÔÚÊÂ¼şÔ´¶ÔÏóÖĞµÇ¼Ç£º     
+	         //å°†ç›‘å¬å™¨åœ¨äº‹ä»¶æºå¯¹è±¡ä¸­ç™»è®°ï¼š     
 	         DemoListener1 listener1 = new DemoListener1();     
 	         ds.addDemoListener(listener1);     
 	         ds.addDemoListener(new DemoListener() {     
 	            public void handleEvent(DemoEvent event) {     
-	            System.out.println("Method come from ÄäÃûÀà...");     
+	            System.out.println("Method come from åŒ¿åç±»...");     
 	          }     
 	        });     
-	       ds.notifyDemoEvent();//´¥·¢ÊÂ¼ş¡¢Í¨Öª¼àÌıÆ÷     
+	       ds.notifyDemoEvent();//è§¦å‘äº‹ä»¶ã€é€šçŸ¥ç›‘å¬å™¨     
 	     }catch(Exception ex){  
 	       ex.printStackTrace();  
 	       }     

@@ -26,7 +26,7 @@ public class RepairPanel extends JPanel{
 		ImageIcon image = new ImageIcon(path);
 		showButton = new JButton();
 		showButton.setIcon(image);
-		//ÊÇ°´Å¥Ö»ÓĞÎÄ×Ö
+		//æ˜¯æŒ‰é’®åªæœ‰æ–‡å­—
 		showButton.setContentAreaFilled(false);
 		nameLabel = new JLabel("       " + name);
 		
@@ -39,7 +39,7 @@ public class RepairPanel extends JPanel{
 		add(nameLabel,BorderLayout.SOUTH);
 		add(leftBlankLabel,BorderLayout.WEST);
 		add(rightBlankLabel,BorderLayout.EAST);
-		setOpaque(false);//ÉèÖÃÍ¸Ã÷
+		setOpaque(false);//è®¾ç½®é€æ˜
 	}
 
 }

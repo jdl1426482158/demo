@@ -52,7 +52,7 @@ public class ListFrame extends JFrame {
 					public void valueChanged(ListSelectionEvent event)
 					{
 						i++;
-						System.out.println(i);//¸Ä±äÒ»´Î»áÖ´ĞĞÁ½±ß£»
+						System.out.println(i);//æ”¹å˜ä¸€æ¬¡ä¼šæ‰§è¡Œä¸¤è¾¹ï¼›
 						//ERROR
 					}
 				

@@ -18,7 +18,7 @@ public class DrawLineTest extends JPanel {
 	private static final long serialVersionUID = -2606718656969776683L;
 	private int startx, starty;
 	private int midx, midy;
-	// private boolean sit=false;//false±íÊ¾ÉÏÒ»¸ö±£´æÔÚmidx[0],midy[0];
+	// private boolean sit=false;//falseè¡¨ç¤ºä¸Šä¸€ä¸ªä¿å­˜åœ¨midx[0],midy[0];
 	private int endx, endy;
 
 	private Shape shape;
@@ -41,7 +41,7 @@ public class DrawLineTest extends JPanel {
 			midy = endy;
 			endx = arg0.getX();
 			endy = arg0.getY();
-			repaint();// Ö»ÓĞ·ÅÔÚ×îºó²ÅÄÜ²úÉú×îÉÙÆçÒå
+			repaint();// åªæœ‰æ”¾åœ¨æœ€åæ‰èƒ½äº§ç”Ÿæœ€å°‘æ­§ä¹‰
 		}
 
 		@Override
@@ -76,7 +76,7 @@ public class DrawLineTest extends JPanel {
 			midx = startx;
 			midy = starty;
 			endx = startx;
-			endy = starty;// ¶Ô×ø±ê³õÊ¼»¯
+			endy = starty;// å¯¹åæ ‡åˆå§‹åŒ–
 		}
 
 		@Override

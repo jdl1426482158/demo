@@ -22,7 +22,7 @@ public class BackFrame extends JFrame{
 		panel.setLayout(null);
 		JButton one = new JButton("one");
 		one.setBounds(0, 0, 100, 40);
-		//Ê¹ÓÃÄäÃûÄÚ²¿Àà
+		//ä½¿ç”¨åŒ¿åå†…éƒ¨ç±»
 		one.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

@@ -1,7 +1,7 @@
 package os.clipboard;
 
 /*
-* ²é¿´Í¼ĞÎµÄ´°¿Ú
+* æŸ¥çœ‹å›¾å½¢çš„çª—å£
 */
 import java.awt.Frame;
 import java.awt.Graphics;
@@ -11,7 +11,7 @@ import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 /**
-*  ÓÃÓÚÏÔÊ¾Í¼ĞÎµÄ´°¿Ú
+*  ç”¨äºæ˜¾ç¤ºå›¾å½¢çš„çª—å£
 */
 public class ImageViewer extends Frame {
     /**
@@ -20,7 +20,7 @@ public class ImageViewer extends Frame {
 	private static final long serialVersionUID = 1L;
 	private Image image;
     /**
-    * ÏÔÊ¾Ò»¸öÍ¼Ïñ
+    * æ˜¾ç¤ºä¸€ä¸ªå›¾åƒ
     * @param viewMe
     */
     public ImageViewer(Image viewMe) {
@@ -38,9 +38,9 @@ public class ImageViewer extends Frame {
     System.exit(0);
     }
     });
-    //´°¿ÚÊÊÓ¦Í¼Ïñ´óĞ¡
+    //çª—å£é€‚åº”å›¾åƒå¤§å°
     setSize(image.getWidth(null), image.getHeight(null));
-    //´°¿Ú±êÌâ
+    //çª—å£æ ‡é¢˜
     setTitle("Viewing Image from Clipboard"); 
     setVisible(true);
     }
@@ -48,7 +48,7 @@ public class ImageViewer extends Frame {
     graphics.drawImage(image, 0, 0, null);
     }
     /**
-    * ÓÃÓÚ¶ÁÈ¡Í¼ÏñÎÄ¼ş²¢Éú³ÉImage¶ÔÏó
+    * ç”¨äºè¯»å–å›¾åƒæ–‡ä»¶å¹¶ç”ŸæˆImageå¯¹è±¡
     */
     public static Image getImageFromFile(String fileName) {
     Toolkit toolkit = Toolkit.getDefaultToolkit();

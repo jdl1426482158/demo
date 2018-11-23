@@ -2,18 +2,18 @@ package basic.base;
 
 import java.util.Random;
 
-//enum±¾ÉíÊÇÒ»¸öÌØÊâµÄÀà,²¢ÇÒÎŞ·¨±»¼Ì³ĞºÍÊµÏÖ
+//enumæœ¬èº«æ˜¯ä¸€ä¸ªç‰¹æ®Šçš„ç±»,å¹¶ä¸”æ— æ³•è¢«ç»§æ‰¿å’Œå®ç°
 public enum EnumExample {
 	
-	//³£Á¿ÆäÊµ³õÊ¼»¯×Ô¶¯µ÷ÓÃ¶ÔÓ¦¹¹Ôì·½·¨£¬Îó²Î¹¹Ôì¿ÉÒÔÊ¡ÂÔÀ¨ºÅ£¬×Ô¶¯Ìí¼Ópublic static final claassType 
-	StudentA("Ğ¡ºì",19,11410300),StudentB,StudentC;
+	//å¸¸é‡å…¶å®åˆå§‹åŒ–è‡ªåŠ¨è°ƒç”¨å¯¹åº”æ„é€ æ–¹æ³•ï¼Œè¯¯å‚æ„é€ å¯ä»¥çœç•¥æ‹¬å·ï¼Œè‡ªåŠ¨æ·»åŠ public static final claassType 
+	StudentA("å°çº¢",19,11410300),StudentB,StudentC;
 	
 	private final String name;
 	private int age;
 	private final int studentID;
 	private Random random = new Random();
 	
-	//¹¹Ôì·½·¨£¬×¢Òâ£º¹¹Ôì·½·¨²»ÄÜÎªpublic£¬ÒòÎªenum²¢²»¿ÉÒÔ±»ÊµÀı»¯
+	//æ„é€ æ–¹æ³•ï¼Œæ³¨æ„ï¼šæ„é€ æ–¹æ³•ä¸èƒ½ä¸ºpublicï¼Œå› ä¸ºenumå¹¶ä¸å¯ä»¥è¢«å®ä¾‹åŒ–
 	private EnumExample(String name,int age,int studentID)
 	{
 		this.name = name;
@@ -22,7 +22,7 @@ public enum EnumExample {
 	}
 	
 	private EnumExample(){
-		this.name = "Ğ¡"+String.valueOf((char)(random.nextInt(24)+'A'));
+		this.name = "å°"+String.valueOf((char)(random.nextInt(24)+'A'));
 		this.studentID = random.nextInt(99)+11410300;
 		this.age = random.nextInt(99);
 	}

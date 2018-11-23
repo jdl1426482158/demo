@@ -12,34 +12,34 @@ public class ServerSocketChannelTest {
 
 	public void initChannel() throws IOException, InterruptedException {
 		
-		ServerSocketChannel socketChannel = ServerSocketChannel.open(); 		// ±ØĞëÍ¨¹ı¾²Ì¬·½·¨»ñÈ¡£¬ÒòÎª±¾ÉíÊÇ³éÏóÀà.
+		ServerSocketChannel socketChannel = ServerSocketChannel.open(); 		// å¿…é¡»é€šè¿‡é™æ€æ–¹æ³•è·å–ï¼Œå› ä¸ºæœ¬èº«æ˜¯æŠ½è±¡ç±».
 		socketChannel.configureBlocking(false);
-		socketChannel.bind(new InetSocketAddress(9999));						// socketChannel.socket().bind(new InetSocketAddress(9999));jdk 1.7Ö®Ç°
+		socketChannel.bind(new InetSocketAddress(9999));						// socketChannel.socket().bind(new InetSocketAddress(9999));jdk 1.7ä¹‹å‰
 
 		ByteBuffer byteBuffer = ByteBuffer.allocate(size);
 		while (true) {
 			SocketChannel channel = socketChannel.accept();
 			if (channel == null) {
-				Thread.sleep(100); 												// ÒòÎªÎª·Ç×èÈûËùÒÔµ±Ã»ÓĞ½ÓÊÜµ½Á¬½ÓÊ±·µ»ØÎªnull
+				Thread.sleep(100); 												// å› ä¸ºä¸ºéé˜»å¡æ‰€ä»¥å½“æ²¡æœ‰æ¥å—åˆ°è¿æ¥æ—¶è¿”å›ä¸ºnull
 				continue;
 			}
 
-			channel.configureBlocking(false);									// »ñµÃµÄSocketChannelÄ¬ÈÏ×´Ì¬ÊÇ×èÈûµÄ£¬ËùÒÔĞèÒªÍ¨¹ıÉèÖÃ¸ÄÎª·Ç×èÈûµÄ×´Ì¬¡£
+			channel.configureBlocking(false);									// è·å¾—çš„SocketChannelé»˜è®¤çŠ¶æ€æ˜¯é˜»å¡çš„ï¼Œæ‰€ä»¥éœ€è¦é€šè¿‡è®¾ç½®æ”¹ä¸ºéé˜»å¡çš„çŠ¶æ€ã€‚
 
 			if (channel != null) {
 
-																				// Êä³öÁ¬½ÓĞÅÏ¢
+																				// è¾“å‡ºè¿æ¥ä¿¡æ¯
 				InetSocketAddress remoteAddress = (InetSocketAddress) channel.getRemoteAddress();
 				System.out.println(remoteAddress.getAddress());
 				System.out.println(remoteAddress.getPort());
 
-				while (channel.read(byteBuffer) >= 0) { 						// Ã»ÓĞÊı¾İ·µ»ØÎªÁã£¬½áÊø·µ»Ø-1,Á¬½ÓÁíÒ»¶ËÒì³£¹Ø±Õ£¬Ôò»ØÅÜ³öIOÒì³£¡£
+				while (channel.read(byteBuffer) >= 0) { 						// æ²¡æœ‰æ•°æ®è¿”å›ä¸ºé›¶ï¼Œç»“æŸè¿”å›-1,è¿æ¥å¦ä¸€ç«¯å¼‚å¸¸å…³é—­ï¼Œåˆ™å›è·‘å‡ºIOå¼‚å¸¸ã€‚
 
-					byteBuffer.flip();											// ÇĞ»»»º´æµÄÄ£Ê½Îª´Ó»º´æÊä³ö£»
+					byteBuffer.flip();											// åˆ‡æ¢ç¼“å­˜çš„æ¨¡å¼ä¸ºä»ç¼“å­˜è¾“å‡ºï¼›
 					while (byteBuffer.hasRemaining()) {
 						System.out.print((char) byteBuffer.get());
 					}
-					byteBuffer.clear(); 										// Çå¿Õ»º´æ£¬²¢ÇÒ»Ø¸´µ½³õÊ¼Ğ´Èë×´Ì¬;
+					byteBuffer.clear(); 										// æ¸…ç©ºç¼“å­˜ï¼Œå¹¶ä¸”å›å¤åˆ°åˆå§‹å†™å…¥çŠ¶æ€;
 
 				}
 			}

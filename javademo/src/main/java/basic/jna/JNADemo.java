@@ -8,12 +8,12 @@ import com.sun.jna.Platform;
 public class JNADemo {
  
 	/*
-	 * Õâ¸öDLibraryÃû×ÖÊÇ×Ô¼º¶¨ÒåµÄ
+	 * è¿™ä¸ªDLibraryåå­—æ˜¯è‡ªå·±å®šä¹‰çš„
 	 */
     public interface DLibrary extends Library {
-    	//ÅĞ¶ÏÊÇ·ñÎªwindowÆ½Ì¨,µ÷ÓÃwindowÆ½Ì¨ÏÂµÄmsvcrt.dll
+    	//åˆ¤æ–­æ˜¯å¦ä¸ºwindowå¹³å°,è°ƒç”¨windowå¹³å°ä¸‹çš„msvcrt.dll
     	
-    	//Í¨¹ıINSTANCE,Õâ¸öpublic static±äÁ¿À´·µ»ØÊµÀı
+    	//é€šè¿‡INSTANCE,è¿™ä¸ªpublic staticå˜é‡æ¥è¿”å›å®ä¾‹
         DLibrary INSTANCE = (DLibrary)
             Native.loadLibrary((Platform.isWindows() ? "msvcrt" : "c"),
                                DLibrary.class);

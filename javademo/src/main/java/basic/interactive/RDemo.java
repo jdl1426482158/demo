@@ -6,14 +6,14 @@ import org.rosuda.REngine.Rserve.RConnection;
 import org.rosuda.REngine.Rserve.RserveException;
 
 /*
- * µ¼Èë°üµÄÊ±ºò¿ÉÄÜ»á³öÏÖThe package org.rosuda.REngine is accessible from more than one module: REngine, RserveEngine£¬
- * Õâ¸öÌáÊ¾£¬Ö»ÒªÔÙlibraryÊ±°ÑËûÒÆ¶¯µ½classpathÀïÃæ¾ÍºÃ
+ * å¯¼å…¥åŒ…çš„æ—¶å€™å¯èƒ½ä¼šå‡ºç°The package org.rosuda.REngine is accessible from more than one module: REngine, RserveEngineï¼Œ
+ * è¿™ä¸ªæç¤ºï¼Œåªè¦å†libraryæ—¶æŠŠä»–ç§»åŠ¨åˆ°classpathé‡Œé¢å°±å¥½
  * 
- * °üÆäÊµÔÙRÖĞinstall.package(Rserve),ºóÔÚrjavaÖĞ¾Í°üº¬ÁËÏàÓ¦µÄjar
+ * åŒ…å…¶å®å†Rä¸­install.package(Rserve),ååœ¨rjavaä¸­å°±åŒ…å«äº†ç›¸åº”çš„jar
  */
 
 /*
- * ¿ÉÄÜĞèÒªÅäÖÃ»·¾³±äÁ¿
+ * å¯èƒ½éœ€è¦é…ç½®ç¯å¢ƒå˜é‡
  * D:\studysoft\R-3.4.2\library\Rserve\libs\x64
  */
 public class RDemo {

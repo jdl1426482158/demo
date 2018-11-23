@@ -2,12 +2,12 @@ package basic.base;
 
 public class StringDemo {
 	/*
-	 * ×Ö·û´®±¾ÉíÊÇÎŞ·¨ĞŞ¸ÄµÄ£¬ÔÙÀûÓÃ+ÔËËã·ûÁ¬½Ó×Ö·û´®µÄÊ±ºò£¬ »ØÓĞÓÅ»¯£¬ÓÃStringBuilderÀ´²Ù×÷µÄ£¬ËùÒÔ²»ÄÜËã²Ù×÷·ûÖØÔØ
-	 * µ«StringBuilder²»ÊÇÏß³Ì°²È«µÄ£¬Ïß³Ì°²È«¾ÍĞèÒªÊ¹ÓÃStringBuffer
+	 * å­—ç¬¦ä¸²æœ¬èº«æ˜¯æ— æ³•ä¿®æ”¹çš„ï¼Œå†åˆ©ç”¨+è¿ç®—ç¬¦è¿æ¥å­—ç¬¦ä¸²çš„æ—¶å€™ï¼Œ å›æœ‰ä¼˜åŒ–ï¼Œç”¨StringBuilderæ¥æ“ä½œçš„ï¼Œæ‰€ä»¥ä¸èƒ½ç®—æ“ä½œç¬¦é‡è½½
+	 * ä½†StringBuilderä¸æ˜¯çº¿ç¨‹å®‰å…¨çš„ï¼Œçº¿ç¨‹å®‰å…¨å°±éœ€è¦ä½¿ç”¨StringBuffer
 	 */
 	public static void main(String[] args) {
 		String s = "This is a test.";
-		// ×Ö·û´®·Ö¸î
+		// å­—ç¬¦ä¸²åˆ†å‰²
 		String ss[] = s.split(" ");
 		System.out.println(ss.length);
 		for (int i = 0; i < ss.length; i++) {

@@ -16,7 +16,7 @@ public class SliderDemo {
 		
 		sliderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		sliderFrame.setSize(220, 270);
-		sliderFrame.setUndecorated(true);//Òş²Ø±ß¿ò£»
+		sliderFrame.setUndecorated(true);//éšè—è¾¹æ¡†ï¼›
 		sliderFrame.setVisible(true);
 		
 		BufferedImage bi = new BufferedImage(sliderFrame.getWidth(),

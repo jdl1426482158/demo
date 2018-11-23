@@ -1,7 +1,7 @@
 package gui2.listener;
 
 public interface DemoListener extends java.util.EventListener {     
-    //EventListenerÊÇËùÓĞÊÂ¼şÕìÌıÆ÷½Ó¿Ú±ØĞëÀ©Õ¹µÄ±ê¼Ç½Ó¿Ú¡¢ÒòÎªËüÊÇÎŞÄÚÈİµÄ±ê¼Ç½Ó¿Ú¡¢     
-    //ËùÒÔÊÂ¼ş´¦Àí·½·¨ÓÉÎÒÃÇ×Ô¼ºÉùÃ÷ÈçÏÂ£º     
+    //EventListeneræ˜¯æ‰€æœ‰äº‹ä»¶ä¾¦å¬å™¨æ¥å£å¿…é¡»æ‰©å±•çš„æ ‡è®°æ¥å£ã€å› ä¸ºå®ƒæ˜¯æ— å†…å®¹çš„æ ‡è®°æ¥å£ã€     
+    //æ‰€ä»¥äº‹ä»¶å¤„ç†æ–¹æ³•ç”±æˆ‘ä»¬è‡ªå·±å£°æ˜å¦‚ä¸‹ï¼š     
     public void handleEvent(DemoEvent dm);     
 }  

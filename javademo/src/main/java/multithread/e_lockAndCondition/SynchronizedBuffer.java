@@ -35,7 +35,7 @@ public class SynchronizedBuffer implements Buffer {
 			else
 				isRun=false;
 			
-			occupied = true;//ÓÚÊéÉÏ²»Ò»Ñù
+			occupied = true;//äºä¹¦ä¸Šä¸ä¸€æ ·
 			canRead.signal();
 		} finally {
 			//accessLock.unlock();

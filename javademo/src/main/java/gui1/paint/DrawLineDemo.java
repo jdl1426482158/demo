@@ -1,5 +1,5 @@
 package gui1.paint;
-//»¹ÊÇÊ§°ÜÁË°¡
+//è¿˜æ˜¯å¤±è´¥äº†å•Š
 import java.awt.Color;
 
 import javax.swing.JFrame;

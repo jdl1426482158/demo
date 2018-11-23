@@ -1,7 +1,7 @@
 package basic.base;
 
 public class DefaultClass {
-//Ä¬ÈÏÀàÖ»ÄÜÔÙÍ¬Ò»¸ö°üÄÚ·ÃÎÊ
+//é»˜è®¤ç±»åªèƒ½å†åŒä¸€ä¸ªåŒ…å†…è®¿é—®
 	static class SSS {
 		public static void print() {
 			System.out.println("I want you!");

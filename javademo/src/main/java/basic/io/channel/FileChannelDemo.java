@@ -9,14 +9,14 @@ import java.nio.channels.FileChannel;
 
 public class FileChannelDemo {
 	/*
-	 * ÎÄ¼şÍ¨µÀ¶¼ÊÇ×èÈûĞÎµÄ£¬ºÃÏñ
+	 * æ–‡ä»¶é€šé“éƒ½æ˜¯é˜»å¡å½¢çš„ï¼Œå¥½åƒ
 	 * 
 	 */
 	
 	
 	public static void main(String[] args) throws IOException {
 
-		String msg = "ÕâÊÇÒ»¸ö²âÊÔ";
+		String msg = "è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•";
 		byte mb[] = msg.getBytes();
 
 		File f = new File("E:\\source\\file\\channel.txt");
@@ -27,20 +27,20 @@ public class FileChannelDemo {
 		FileChannel channel = out.getChannel();
 
 		ByteBuffer buffer = ByteBuffer.allocate(4 * 1024);
-		buffer.put(mb); // ½«Êı¾İĞ´ÈëbufferÖĞ
+		buffer.put(mb); // å°†æ•°æ®å†™å…¥bufferä¸­
 		
 		buffer.flip();
-		channel.write(buffer); // Êä³öÖ®Ç°±ØĞë×ª»»³ÉĞ´µÄÄ£Ê½
+		channel.write(buffer); // è¾“å‡ºä¹‹å‰å¿…é¡»è½¬æ¢æˆå†™çš„æ¨¡å¼
 		out.close();
 
 		FileInputStream in = new FileInputStream(f);
 		byte b[] = new byte[mb.length];
 
-		channel = in.getChannel(); // ÓÉÓÚÇ°ÃæµÄÊä³öÁ÷ËùÒÔµÃµ½µÄÒ²ÊÇÖ»ÄÜÊä³öµÄµ¥ÏòÍ¨µÀ
-		buffer.rewind(); // ½«bufferÖØĞÂÉèÎªĞ´Ä£Ê½
-		channel.read(buffer); // ¶ÁÈ¡Êı¾İ²¢Ğ´ÈëbufferÖĞ
+		channel = in.getChannel(); // ç”±äºå‰é¢çš„è¾“å‡ºæµæ‰€ä»¥å¾—åˆ°çš„ä¹Ÿæ˜¯åªèƒ½è¾“å‡ºçš„å•å‘é€šé“
+		buffer.rewind(); // å°†bufferé‡æ–°è®¾ä¸ºå†™æ¨¡å¼
+		channel.read(buffer); // è¯»å–æ•°æ®å¹¶å†™å…¥bufferä¸­
 		buffer.flip();
-		buffer.get(b); // ´ÓbufferÖĞ»ñµÃÊı¾İ
+		buffer.get(b); // ä»bufferä¸­è·å¾—æ•°æ®
 		System.out.println(new String(b));
 		in.close();
 	}

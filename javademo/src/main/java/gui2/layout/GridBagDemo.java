@@ -20,20 +20,20 @@ public class GridBagDemo extends JFrame {
 	}
 
 	public void init() {
-		j1 = new JButton("´ò¿ª");
-		j2 = new JButton("±£´æ");
-		j3 = new JButton("Áí´æÎª");
+		j1 = new JButton("æ‰“å¼€");
+		j2 = new JButton("ä¿å­˜");
+		j3 = new JButton("å¦å­˜ä¸º");
 		j4 = new JPanel();
-		String[] str = { "java±Ê¼Ç", "C#±Ê¼Ç", "HTML5±Ê¼Ç" };
+		String[] str = { "javaç¬”è®°", "C#ç¬”è®°", "HTML5ç¬”è®°" };
 		j5 = new JComboBox<Object>(str);
 		j6 = new JTextField();
-		j7 = new JButton("Çå¿Õ");
+		j7 = new JButton("æ¸…ç©º");
 		j8 = new JList<Object>(str);
 		j9 = new JTextArea();
-		j9.setBackground(Color.PINK);// ÎªÁË¿´³öÐ§¹û£¬ÉèÖÃÁËÑÕÉ«
+		j9.setBackground(Color.PINK);// ä¸ºäº†çœ‹å‡ºæ•ˆæžœï¼Œè®¾ç½®äº†é¢œè‰²
 		GridBagLayout layout = new GridBagLayout();
 		this.setLayout(layout);
-		this.add(j1);// °Ñ×é¼þÌí¼Ó½øjframe
+		this.add(j1);// æŠŠç»„ä»¶æ·»åŠ è¿›jframe
 		this.add(j2);
 		this.add(j3);
 		this.add(j4);
@@ -42,18 +42,18 @@ public class GridBagDemo extends JFrame {
 		this.add(j7);
 		this.add(j8);
 		this.add(j9);
-		GridBagConstraints s = new GridBagConstraints();// ¶¨ÒåÒ»¸öGridBagConstraints£¬
-		// ÊÇÓÃÀ´¿ØÖÆÌí¼Ó½øµÄ×é¼þµÄÏÔÊ¾Î»ÖÃ
+		GridBagConstraints s = new GridBagConstraints();// å®šä¹‰ä¸€ä¸ªGridBagConstraintsï¼Œ
+		// æ˜¯ç”¨æ¥æŽ§åˆ¶æ·»åŠ è¿›çš„ç»„ä»¶çš„æ˜¾ç¤ºä½ç½®
 		s.fill = GridBagConstraints.BOTH;
-		// ¸Ã·½·¨ÊÇÎªÁËÉèÖÃÈç¹û×é¼þËùÔÚµÄÇøÓò±È×é¼þ±¾ÉíÒª´óÊ±µÄÏÔÊ¾Çé¿ö
-		// NONE£º²»µ÷Õû×é¼þ´óÐ¡¡£
-		// HORIZONTAL£º¼Ó¿í×é¼þ£¬Ê¹ËüÔÚË®Æ½·½ÏòÉÏÌîÂúÆäÏÔÊ¾ÇøÓò£¬µ«ÊÇ²»¸Ä±ä¸ß¶È¡£
-		// VERTICAL£º¼Ó¸ß×é¼þ£¬Ê¹ËüÔÚ´¹Ö±·½ÏòÉÏÌîÂúÆäÏÔÊ¾ÇøÓò£¬µ«ÊÇ²»¸Ä±ä¿í¶È¡£
-		// BOTH£ºÊ¹×é¼þÍêÈ«ÌîÂúÆäÏÔÊ¾ÇøÓò¡£
-		s.gridwidth = 1;// ¸Ã·½·¨ÊÇÉèÖÃ×é¼þË®Æ½ËùÕ¼ÓÃµÄ¸ñ×ÓÊý£¬Èç¹ûÎª0£¬¾ÍËµÃ÷¸Ã×é¼þÊÇ¸ÃÐÐµÄ×îºóÒ»¸ö
-		s.weightx = 0;// ¸Ã·½·¨ÉèÖÃ×é¼þË®Æ½µÄÀ­Éì·ù¶È£¬Èç¹ûÎª0¾ÍËµÃ÷²»À­Éì£¬²»Îª0¾ÍËæ×Å´°¿ÚÔö´ó½øÐÐÀ­Éì£¬0µ½1Ö®¼ä
-		s.weighty = 0;// ¸Ã·½·¨ÉèÖÃ×é¼þ´¹Ö±µÄÀ­Éì·ù¶È£¬Èç¹ûÎª0¾ÍËµÃ÷²»À­Éì£¬²»Îª0¾ÍËæ×Å´°¿ÚÔö´ó½øÐÐÀ­Éì£¬0µ½1Ö®¼ä
-		layout.setConstraints(j1, s);// ÉèÖÃ×é¼þ
+		// è¯¥æ–¹æ³•æ˜¯ä¸ºäº†è®¾ç½®å¦‚æžœç»„ä»¶æ‰€åœ¨çš„åŒºåŸŸæ¯”ç»„ä»¶æœ¬èº«è¦å¤§æ—¶çš„æ˜¾ç¤ºæƒ…å†µ
+		// NONEï¼šä¸è°ƒæ•´ç»„ä»¶å¤§å°ã€‚
+		// HORIZONTALï¼šåŠ å®½ç»„ä»¶ï¼Œä½¿å®ƒåœ¨æ°´å¹³æ–¹å‘ä¸Šå¡«æ»¡å…¶æ˜¾ç¤ºåŒºåŸŸï¼Œä½†æ˜¯ä¸æ”¹å˜é«˜åº¦ã€‚
+		// VERTICALï¼šåŠ é«˜ç»„ä»¶ï¼Œä½¿å®ƒåœ¨åž‚ç›´æ–¹å‘ä¸Šå¡«æ»¡å…¶æ˜¾ç¤ºåŒºåŸŸï¼Œä½†æ˜¯ä¸æ”¹å˜å®½åº¦ã€‚
+		// BOTHï¼šä½¿ç»„ä»¶å®Œå…¨å¡«æ»¡å…¶æ˜¾ç¤ºåŒºåŸŸã€‚
+		s.gridwidth = 1;// è¯¥æ–¹æ³•æ˜¯è®¾ç½®ç»„ä»¶æ°´å¹³æ‰€å ç”¨çš„æ ¼å­æ•°ï¼Œå¦‚æžœä¸º0ï¼Œå°±è¯´æ˜Žè¯¥ç»„ä»¶æ˜¯è¯¥è¡Œçš„æœ€åŽä¸€ä¸ª
+		s.weightx = 0;// è¯¥æ–¹æ³•è®¾ç½®ç»„ä»¶æ°´å¹³çš„æ‹‰ä¼¸å¹…åº¦ï¼Œå¦‚æžœä¸º0å°±è¯´æ˜Žä¸æ‹‰ä¼¸ï¼Œä¸ä¸º0å°±éšç€çª—å£å¢žå¤§è¿›è¡Œæ‹‰ä¼¸ï¼Œ0åˆ°1ä¹‹é—´
+		s.weighty = 0;// è¯¥æ–¹æ³•è®¾ç½®ç»„ä»¶åž‚ç›´çš„æ‹‰ä¼¸å¹…åº¦ï¼Œå¦‚æžœä¸º0å°±è¯´æ˜Žä¸æ‹‰ä¼¸ï¼Œä¸ä¸º0å°±éšç€çª—å£å¢žå¤§è¿›è¡Œæ‹‰ä¼¸ï¼Œ0åˆ°1ä¹‹é—´
+		layout.setConstraints(j1, s);// è®¾ç½®ç»„ä»¶
 		s.gridwidth = 1;
 		s.weightx = 0;
 		s.weighty = 0;
@@ -62,10 +62,10 @@ public class GridBagDemo extends JFrame {
 		s.weightx = 0;
 		s.weighty = 0;
 		layout.setConstraints(j3, s);
-		s.gridwidth = 0;// ¸Ã·½·¨ÊÇÉèÖÃ×é¼þË®Æ½ËùÕ¼ÓÃµÄ¸ñ×ÓÊý£¬Èç¹ûÎª0£¬¾ÍËµÃ÷¸Ã×é¼þÊÇ¸ÃÐÐµÄ×îºóÒ»¸ö
-		s.weightx = 0;// ²»ÄÜÎª1£¬j4ÊÇÕ¼ÁË4¸ö¸ñ£¬²¢ÇÒ¿ÉÒÔºáÏòÀ­Éì£¬
-		// µ«ÊÇÈç¹ûÎª1£¬ºóÃæÐÐµÄÁÐµÄ¸ñÒ²»á¸ú×ÅÀ­Éì,µ¼ÖÂj7ËùÔÚµÄÁÐÒ²¿ÉÒÔÀ­Éì
-		// ËùÒÔÓ¦¸ÃÊÇ¸ú×Åj6½øÐÐÀ­Éì
+		s.gridwidth = 0;// è¯¥æ–¹æ³•æ˜¯è®¾ç½®ç»„ä»¶æ°´å¹³æ‰€å ç”¨çš„æ ¼å­æ•°ï¼Œå¦‚æžœä¸º0ï¼Œå°±è¯´æ˜Žè¯¥ç»„ä»¶æ˜¯è¯¥è¡Œçš„æœ€åŽä¸€ä¸ª
+		s.weightx = 0;// ä¸èƒ½ä¸º1ï¼Œj4æ˜¯å äº†4ä¸ªæ ¼ï¼Œå¹¶ä¸”å¯ä»¥æ¨ªå‘æ‹‰ä¼¸ï¼Œ
+		// ä½†æ˜¯å¦‚æžœä¸º1ï¼ŒåŽé¢è¡Œçš„åˆ—çš„æ ¼ä¹Ÿä¼šè·Ÿç€æ‹‰ä¼¸,å¯¼è‡´j7æ‰€åœ¨çš„åˆ—ä¹Ÿå¯ä»¥æ‹‰ä¼¸
+		// æ‰€ä»¥åº”è¯¥æ˜¯è·Ÿç€j6è¿›è¡Œæ‹‰ä¼¸
 		s.weighty = 0;
 		layout.setConstraints(j4, s);
 		s.gridwidth = 2;
