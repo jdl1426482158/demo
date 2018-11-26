@@ -11,8 +11,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 /*
- * ObjectOutputStreamÔÚĞ´ÈëµÄÊ±ºò»á¼ÓÒ»¸öÍ·£¬µ¼ÖÂÁ¬ĞøĞ´ÈëÁ½´ÎµÄÊ±ºò»Ø³ö´í
- * ËùÒÔ¶à´ÎĞ´ÈëµÄÊ±ºòÒªÖØĞ´writeStreamHeader·½·¨£¬Ê¹Æä²»±»µ÷ÓÃµ±ÎÄ¼ş´æÔÚÍ·Ê±
+ * ObjectOutputStreamåœ¨å†™å…¥çš„æ—¶å€™ä¼šåŠ ä¸€ä¸ªå¤´ï¼Œå¯¼è‡´è¿ç»­å†™å…¥ä¸¤æ¬¡çš„æ—¶å€™å›å‡ºé”™
+ * æ‰€ä»¥å¤šæ¬¡å†™å…¥çš„æ—¶å€™è¦é‡å†™writeStreamHeaderæ–¹æ³•ï¼Œä½¿å…¶ä¸è¢«è°ƒç”¨å½“æ–‡ä»¶å­˜åœ¨å¤´æ—¶
  */
 
 public class FileObjectStream {
@@ -36,7 +36,7 @@ public class FileObjectStream {
 		File f1 = new File("E:\\source\\data\\object");
 		File f2 = new File("E:\\source\\data\\object_copy");
 
-		// ×¼±¸ÄÚÈİ
+		// å‡†å¤‡å†…å®¹
 		if (!f1.exists()) {
 			f1.createNewFile();
 			String s = "Hello, World!";
@@ -68,11 +68,11 @@ public class FileObjectStream {
 			out.flush();
 			out.close();
 		} catch (Exception e) {
-			// ²»¿¼ÂÇÒì³£Çé¿ö£¬¹Ê²»×ö´¦Àí
+			// ä¸è€ƒè™‘å¼‚å¸¸æƒ…å†µï¼Œæ•…ä¸åšå¤„ç†
 		}
 	}
 
-	// ¶ÁÈ¡½áÊøÊ±ºò»Ø·Å³öEOFException
+	// è¯»å–ç»“æŸæ—¶å€™å›æ”¾å‡ºEOFException
 	public static Object[] readObject(File f1) {
 		ArrayList<Object> list = new ArrayList<Object>();
 		try {
@@ -87,12 +87,12 @@ public class FileObjectStream {
 				}
 			}
 		} catch (Exception e) {
-			// ³ö´í¾Í²»¶Á»¹²»ĞĞÂï
+			// å‡ºé”™å°±ä¸è¯»è¿˜ä¸è¡Œå˜›
 		}
 		return list.toArray();
 	}
 
-	// ÒòÎª2´Î¼°ÒÔÉÏ¶ÔÏóÊäÈëÊ±ÓÉÓÚ»á¶à´ÎÌí¼ÓHeaderËùÒÔ±ØĞëÈ¥µôheader²ÅĞĞ
+	// å› ä¸º2æ¬¡åŠä»¥ä¸Šå¯¹è±¡è¾“å…¥æ—¶ç”±äºä¼šå¤šæ¬¡æ·»åŠ Headeræ‰€ä»¥å¿…é¡»å»æ‰headeræ‰è¡Œ
 	private static class FileObjectOutputStream extends ObjectOutputStream {
 		public FileObjectOutputStream(OutputStream out) throws IOException {
 			super(out);

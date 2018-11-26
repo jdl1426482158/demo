@@ -8,13 +8,13 @@ public class RandomAccessDemo {
 		if (!f.exists())
 			f.createNewFile();
 
-		//´íÎó°¸Àı£¬Ê²Ã´¹í
+		//é”™è¯¯æ¡ˆä¾‹ï¼Œä»€ä¹ˆé¬¼
 //		RandomAccessFile access = new RandomAccessFile(f, "rw");
 ////		byte head[] = { -17, -69, -65 };
 ////		access.write(head, 0, head.length);
-//		access.writeChars("ÒªÍêÀ²");
+//		access.writeChars("è¦å®Œå•¦");
 //		access.writeBoolean(true);
-//		access.writeChars("Å¶ionÅ¶±ÈÈçÄØ");
+//		access.writeChars("å“¦ionå“¦æ¯”å¦‚å‘¢");
 //		long pos = access.getFilePointer();
 //		access.writeChars("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
 	}
